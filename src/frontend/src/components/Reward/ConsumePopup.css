@@ -1,0 +1,95 @@
+.consume-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2100;
+}
+
+/* Consume Modal Box */
+.consume-popup {
+  background: linear-gradient(135deg, #a020f0, #6a1bb3);
+  padding: 35px;
+  border-radius: 18px;
+  width: 310px;
+  color: white;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.35);
+  overflow: hidden;
+}
+
+/* Floating Stars */
+.consume-star {
+  position: absolute;
+  color: #ffe066;
+  opacity: 0.8;
+  filter: drop-shadow(0 0 4px #ffaa00);
+}
+
+.cstar-1 {
+  top: -12px;
+  left: -10px;
+  font-size: 55px;
+  animation: floatC1 2s infinite alternate ease-in-out;
+}
+
+.cstar-2 {
+  bottom: -18px;
+  right: -16px;
+  font-size: 70px;
+  animation: floatC2 2.2s infinite alternate ease-in-out;
+}
+
+@keyframes floatC1 {
+  from { transform: translateY(0); }
+  to { transform: translateY(12px); }
+}
+
+@keyframes floatC2 {
+  from { transform: translateY(10px); }
+  to { transform: translateY(0); }
+}
+
+/* Bolt Icon */
+.consume-icon {
+  font-size: 65px;
+  color: #ffe066;
+  animation: boltBounce 1.1s infinite ease-in-out;
+}
+
+@keyframes boltBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.consume-title {
+  margin-top: 10px;
+  font-size: 1.4rem;
+  font-family: "Georama";
+}
+
+.consume-amount {
+  margin-top: 15px;
+  font-size: 2.8rem;
+  font-weight: bold;
+  background: rgba(255, 225, 70, 0.25);
+  border: 2px solid rgba(255, 225, 70, 0.5);
+  padding: 15px 0;
+  border-radius: 14px;
+  width: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 12px rgba(255, 225, 70, 0.4);
+  font-family: "Georama";
+}
+
+.consume-note {
+  margin-top: 12px;
+  opacity: 0.85;
+  font-size: 0.95rem;
+  font-family: "Georama";
+}

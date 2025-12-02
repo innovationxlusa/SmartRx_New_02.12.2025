@@ -1,0 +1,31 @@
+/* Style for the card background */
+.custom-card {
+  /* background-color: #ecebeb !important; */
+}
+
+/* Style for the image */
+.custom-image {
+  border: 1px solid #ccc;
+  width: 44px !important;
+  height: 58px;
+}
+
+/* Style for text */
+.custom-text-title {
+  color: #65636e;
+  font-size: 14px;
+  font-family: Georama;
+}
+
+/* Style for text */
+.custom-text-desc {
+  color: #65636e;
+  font-size: 10px;
+  font-family: Georama;
+}
+
+/* Style for the button */
+.custom-button {
+  background-color: #ffffff;
+  border: none;
+}

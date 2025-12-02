@@ -1,0 +1,108 @@
+.landing-mid-section {
+    border-radius: 15px;
+    min-height: 150px;
+}
+
+/* Titles */
+.section-title {
+    color: var(--app-theme-color);
+    font-family: "Solitreo-Regular", cursive;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 115.5%; /* / 32.34px / */
+    letter-spacing: -0.28px;
+    text-align: left;
+}
+
+.section-subtitle {
+    color: var(--content-color);
+    font-family: "Georama";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    -webkit-text-stroke: 0.2px currentColor;
+    line-height: 115.5%;
+    letter-spacing: -0.22px;
+    text-align: left;
+}
+
+/* Description */
+.section-description {
+    color: var(--content-Color);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Urbanist";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    text-align: left;
+}
+
+/* Stats section */
+.stats-wrapper {
+    gap: 3rem;
+}
+
+.stat-item .stat-count {
+    font-family: "Georama", sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--app-theme-color, #4b3b8b);
+    margin: 0;
+    line-height: .6;
+}
+
+.stat-item .stat-label {
+    font-family: "Georama", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--Content-Color, #65636e);
+    margin: 0;
+    padding-top: 2px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-subtitle {
+        font-size: 18px;
+    }
+
+    .section-description {
+        font-size: 13px;
+    }
+
+    .stat-item .stat-count {
+        font-size: 20px;
+    }
+
+    .stat-item .stat-label {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-subtitle {
+        font-size: 18px;
+    }
+
+    .section-description {
+        font-size: 12px;
+    }
+
+    .stat-item .stat-count {
+        font-size: 24px;
+    }
+
+    .stat-item .stat-label {
+        font-size: 14px;
+    }
+}

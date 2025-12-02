@@ -1,0 +1,307 @@
+.vitals-container {
+  margin: 0 auto;
+  font-family: "Georama";
+}
+
+.vital-basic-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  isolation: isolate;
+  width: 100%;
+}
+
+.vital-info-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 72px;
+  min-height: 72px;
+  background: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.vitals-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  gap: 8px;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 12px 5px;
+  height: 72px;
+  min-height: 72px;
+ 
+}
+
+.vital-info-item .vital-info-item-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 40px;
+  height: 40px;
+  background: #eef2ff;
+  border-radius: 123px;
+  flex-shrink: 0;
+}
+/* #bbedc7 */
+.vital-info-item .vital-info-item-header {
+  flex-grow: 0;
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 45px;
+  letter-spacing: -0.006em;
+  color:var(--content-color);
+  min-width: 80px;
+  text-align: left;
+}
+
+.vital-info-item .vital-info-item-data {
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+    color: #475569;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 12px 16px;
+  width: 60px;
+  height: 72px;
+  min-height: 72px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.add-vitals {
+  padding: 8px;
+  font-size: 13px;
+  background: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 30px 0;
+  width: 80%;
+}
+
+.vital-card {
+  border-radius: 12px;
+  margin-bottom: 16px;
+  background: #fff;
+}
+
+.vital-card-header {
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 24px;
+  color: #4b3b8b !important;
+}
+
+.vital-card-date {
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(9px, 2vw, 12px);
+  line-height: 24px;
+  color: #4b3b8b;
+}
+
+.vital-status {
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.vital-status.normal {
+  background-color: #e0f7e9;
+  color: #bbedc7;
+}
+
+.vital-card-body {
+  font-size: 13px;
+}
+
+.vital-desc-container {
+  overflow: hidden;
+  transition: height 0.3s ease, width 0.3s ease;
+  will-change: width, height; /* Optimize for animation */
+}
+
+.vital-desc {
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 400;
+  text-align: justify;
+  color: #65636e;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  padding-right: 10px;
+  white-space: normal;
+  display: inline-block;
+  width: 100%;
+}
+
+.vital-read-inline {
+  user-select: none;
+  font-family: "Georama";
+  font-style: italic;
+  font-weight: 700;
+  color: #65636e;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 13px;
+  margin-left: 7px;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.vital-read-inline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  width: 100%;
+  border-bottom: 2px dotted var(--app-theme-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.vital-read-inline:hover {
+  /* text-decoration: none; */
+  color: var(--app-theme-color);
+}
+
+.vital-read-inline:hover::after {
+  transform: scaleX(1);
+}
+
+.vital-value-block {
+  margin: 8px 0;
+}
+
+.vital-value-block h3 {
+  margin: 0;
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #65636e;
+}
+
+.vital-value-block h3 span {
+  margin: 0;
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.vital-value-block p,
+.vital-observation-block .vital-title {
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0;
+  color: #65636e;
+}
+
+.vital-observation {
+  font-family: "Georama";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4b3b8b;
+}
+
+.vital-observation.low {
+  background: rgba(31, 142, 253, 0.28);
+  border-radius: 6px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  width: 105px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-icon-fill path {
+  fill: rgb(231, 201, 5);
+}
+
+.custom-icon-fill g {
+  fill: black;
+}
+
+.vital-observation.normal {
+  background: #bbedc7;
+  border-radius: 6px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  width: 105px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vital-observation.high {
+  background: rgba(253, 31, 72, 0.28);
+  border-radius: 6px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  width: 105px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.range-img {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.vital-card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding: 0 16px;
+}
+.center-container {
+   display: flex;
+  justify-content: center;  /* Horizontal center */
+  align-items: center;      /* Vertical center */
+  height: 100%;  
+}
+
+.search-input[name="SystolicValue"]::placeholder {
+    font-size: 11px;
+}
+
+.search-input[name="DiastolicValue"]::placeholder {
+    font-size: 11px;
+}

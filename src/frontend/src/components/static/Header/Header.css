@@ -1,0 +1,277 @@
+/* ========== HEADER CONTAINER ========== */
+.header-menu {
+    width: 100%;
+    height: 80px;
+    background-color: #4b3b8b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    animation: slideDownFade 0.5s ease-in-out forwards;
+}
+
+/* Entrance animation */
+@keyframes slideDownFade {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ========== LOGO ========== */
+.logo img {
+    width: 120px;
+    transition: transform 0.4s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.08);
+}
+
+/* ========== ICON GROUPS ========== */
+.group-2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Menu Icon */
+.menu-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.showHideMenuImg {
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+.showHideMenuImg:hover {
+    transform: scale(1.1);
+}
+
+/* Profile Alert Group */
+.profile-alert {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+.alert-icon img {
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.alert-icon img:hover {
+    transform: scale(1.15);
+}
+
+/* Profile Image */
+.profile-icon img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.profile-icon img:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    transform: scale(1.1);
+}
+
+/* ========== PROFILE DROPDOWN ========== */
+.profile-menu-container {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 5px;
+    min-width: 200px;
+    min-height:120px;
+    background: #fff;
+    border: 1px solid #65636e;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+/* Adjust menu position to stay within viewport */
+@media screen and (max-width: 480px) {
+    .profile-menu-container {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%) translateY(-10px);
+        width: 300px;
+    }
+    .profile-menu-container.visible {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .profile-menu-container {
+        right: 10px;
+        transform: translateY(-10px);
+    }
+    .profile-menu-container.visible {
+        transform: translateY(0);
+    }
+}
+.profile-menu-container.visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Scroll-friendly (hidden scroll) */
+.scroll-profile-menu {
+    max-height: 700px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.scroll-profile-menu::-webkit-scrollbar {
+    display: none;
+}
+
+/* ========== PROFILE MENU LIST ========== */
+.profile-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.profile-menu li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: fadeSlideIn 0.4s ease-in-out forwards;
+}
+
+/* Staggered animation delays for all items */
+.profile-menu li:nth-child(1) { animation-delay: 0.05s; }
+.profile-menu li:nth-child(2) { animation-delay: 0.1s; }
+.profile-menu li:nth-child(3) { animation-delay: 0.15s; }
+.profile-menu li:nth-child(4) { animation-delay: 0.2s; }
+.profile-menu li:nth-child(5) { animation-delay: 0.25s; }
+.profile-menu li:nth-child(6) { animation-delay: 0.3s; }
+.profile-menu li:nth-child(7) { animation-delay: 0.35s; }
+.profile-menu li:nth-child(8) { animation-delay: 0.4s; }
+.profile-menu li:nth-child(9) { animation-delay: 0.45s; }
+.profile-menu li:nth-child(10) { animation-delay: 0.5s; }
+.profile-menu li:nth-child(11) { animation-delay: 0.55s; }
+.profile-menu li:nth-child(12) { animation-delay: 0.6s; }
+.profile-menu li:nth-child(13) { animation-delay: 0.65s; }
+.profile-menu li:nth-child(14) { animation-delay: 0.7s; }
+.profile-menu li:nth-child(15) { animation-delay: 0.75s; }
+.profile-menu li:nth-child(n+16) { animation-delay: 0.8s; }
+.profile-menu li:hover {
+    background-color: #f3edf9;
+    border-radius: 5px;
+}
+.profile-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Menu Item Animation */
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ========== LOGOUT SECTION ========== */
+.logout-btn {
+    border-top: 1px solid #eee;
+    padding: 10px;
+    text-align: left;
+    color: #c0392b;
+    transition: background-color 0.3s ease-in-out;
+}
+.logout-btn:hover {
+    background-color: #ffe0e0;
+    border-radius: 5px;
+}
+.logout-btn i {
+    margin-right: 8px;
+    color: #c0392b;
+}
+.logout-btn a {
+    text-decoration: none;
+    color: #c0392b;
+    font-weight: 600;
+}
+
+/* Ensure logout section is visible */
+.profile-menu li:last-child {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    animation: none !important;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+    margin-top: 5px;
+}
+
+.profile-menu li:last-child:hover {
+    background-color: #ffe0e0 !important;
+}
+
+/* ========== PROFILE INITIAL ICON (Optional Circle Avatar) ========== */
+.profile-icon-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    animation: popIn 0.3s ease;
+    margin-left: 10px;
+}
+
+/* Circle Avatar Animation */
+@keyframes popIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ========== RESPONSIVE ========== */
+@media screen and (max-width: 600px) {
+    .logo img {
+        width: 100px;
+    }
+    .customprofing {
+        padding-left: 8px !important;
+    }
+}

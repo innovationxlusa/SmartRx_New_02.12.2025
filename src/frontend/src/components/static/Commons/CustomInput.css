@@ -1,0 +1,195 @@
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+/* Country Code Dropdown Styles */
+.country-code-dropdown {
+    position: relative;
+    z-index: 10;
+    font-family: "Georama";
+}
+
+.country-code-select {
+    border: 1px solid #ced4da;
+    border-radius: 5px 0 0 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #f8f9fa;
+    border-right: none;
+    min-width: 80px;
+    max-width: 120px;
+    outline: none;
+    cursor: pointer;
+    color:#65636e
+}
+
+.country-code-select:focus {
+    border-color: #4b3b8b;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.search-input.with-country-code {
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-style {
+    border-radius: 5px !important;
+    font-size: 14px !important;
+}
+
+.input-style:focus {
+    /* border-color: #007bff; */
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.input-label {
+    font-size: 14px;
+    font-weight: 1000;
+    color: #65636e;
+}
+
+/* Label on top-left */
+.label-top-left-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.label-top-left-wrapper .top-left {
+    font-size: 14px;
+    font-weight: 1000;
+    color: #65636e;
+}
+
+/* Label on top-right */
+.label-top-right-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.label-top-right-wrapper .top-right {
+    font-size: 14px;
+    font-weight: 1000;
+    color: #65636e;
+}
+
+/* Label on left */
+.label-left {
+    flex-direction: row;
+}
+
+.label-left .input-label {
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+/* Label on right */
+.label-right {
+    flex-direction: row;
+}
+
+.label-right .input-label {
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+/* Adjust input field width when label is on left or right */
+.with-side-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.with-side-label .search-input {
+    flex-grow: 1;
+}
+
+.search-input-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 12px;
+    /* default padding, will be overridden conditionally */
+    background: #ffffff;
+    border: 1px solid #65636e;
+    box-shadow: 2px 50px 100px rgba(233, 235, 237, 0.2);
+    border-radius: 5px;
+    font-size: 14px;
+    color: #65636e;
+    outline: none;
+    height: 36px;
+    padding-left: 40px;
+    /* << added padding for left icon */
+}
+
+.search-input.with-icon-left {
+    padding-left: 40px;
+    /* enough to give space for icon + spacing */
+}
+
+.search-input.with-icon-right {
+    padding-right: 40px;
+}
+
+.search-input::placeholder {
+    color: #65636e;
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #3d405b;
+}
+
+.icon.left {
+    left: 10px;
+}
+
+.icon.right {
+    right: 10px;
+}
+
+.icon-img {
+    width: 20px;
+    height: 20px;
+}
+
+.error .search-input {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 2px;
+    text-align: left;
+}
+
+.disabled .search-input {
+    background: #f2f2f2;
+    pointer-events: none;
+}

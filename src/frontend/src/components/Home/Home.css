@@ -1,0 +1,26 @@
+.stickyHeader {
+    transition: all 0.3s ease-in-out;
+}
+
+.expanded-stickyHeader {
+    background: rgba(250, 248, 250, 0.5);
+    backdrop-filter: blur(4px);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* .expanded-stickyHeader .nav-item a {
+    color: #4b3b8b !important;
+} */
+
+.navbar-toggler {
+    text-decoration: none;
+}
+
+.landingMidStyle {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}

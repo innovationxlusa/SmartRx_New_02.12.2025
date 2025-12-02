@@ -1,0 +1,52 @@
+.custom-slider-container {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    /* margin-top: 20px; */
+}
+
+.slider-track {
+    position: relative;
+    height: 2px;
+    background: #b0a8d1;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tick {
+    width: 2px;
+    height: 8px;
+    background: #b0a8d1;
+}
+
+.indicator {
+    position: absolute;
+    top: -4px;
+    width: 2px;
+    height: 16px;
+    background: #00ff6c; /* Green indicator */
+    transform: translateX(-50%);
+}
+
+.slider-value {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    background: #2c1e5e;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.hidden-range {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}

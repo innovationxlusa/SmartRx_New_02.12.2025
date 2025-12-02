@@ -1,0 +1,347 @@
+.modal-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 88%;
+    max-width: 400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1050;
+}
+
+/* When modal is open, show it */
+.modal-box.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Overlay covers the entire page */
+.modal-overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Dark overlay */
+    z-index: 1049;
+    /* Below modal but above page content */
+    inset: 0;
+}
+
+/* Modal dialog (centered) */
+.modal-dialog {
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1051;
+}
+
+.react-datepicker-popper {
+    z-index: 9999 !important;
+}
+
+/* Fade-in effect when modal opens */
+.modal-box.open .modal-dialog {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Image Preview start here */
+.modal-dialog.image-preview-modal {
+    background: transparent;
+    box-shadow: none;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90vh;
+    padding: 0;
+}
+
+.modal-dialog .modal-content {
+    padding: 10px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.image-preview-wrapper {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image-preview-wrapper img {
+    max-width: 91%;
+    max-height: 79vh;
+    border-radius: 12px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Image Preview end here */
+
+/* Close button */
+.modal-dialog .modal-content .close {
+    /* width: 70px;
+    height: 70.96px; */
+    /* background: url("../../../assets/img/CloseIcon.svg") no-repeat center center; */
+    cursor: pointer;
+    background: var(--app-theme-color);
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+
+    border-radius: 50%;
+}
+
+.close-image {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    border: none;
+    cursor: pointer;
+    background: var(--app-theme-color);
+    border-radius: 50%;
+}
+
+.close-pdf {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    cursor: pointer;
+    background: var(--app-theme-color);
+    border-radius: 50%;
+}
+
+.close-pdf svg,
+.close-image svg,
+.close svg {
+    color: var(--text-white);
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    font-weight: 900;
+}
+
+.modal-dialog .modal-content .close:hover {
+    color: #bc1a1a;
+}
+
+.modal-name-data-preview {
+    font-family: "Georama";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: -0.008em;
+    color: var(--theme-font-color);
+    margin: 10px 0 0 0;
+}
+
+.sub-modal-name-data-preview {
+    font-family: "Georama";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 4px;
+    letter-spacing: -0.008em;
+    color: #fdc34b;
+    margin: 10px 0 0 0;
+}
+
+/* Modal body */
+.modal-dialog .modal-content {
+    text-align: center;
+    padding: 20px 5px;
+}
+
+.modal-dialog .modal-content .modal-data {
+    max-height: 76vh;
+    overflow-y: auto;
+    /* padding: 10px; */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.modal-dialog .modal-content .modal-data::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-dialog .modal-content .modal-body {
+    padding: 0 20px !important;
+}
+
+/* Positioning */
+.position-top {
+    align-items: flex-start;
+    padding-top: 10vh;
+}
+
+.position-middle {
+    justify-content: flex-start;
+    /* padding: 0 6vw; */
+}
+
+.position-bottom {
+    align-items: flex-end;
+    padding-bottom: 15vh !important;
+}
+
+.position-left {
+    justify-content: flex-start;
+    padding-left: 10vw;
+}
+
+.position-right {
+    justify-content: flex-end;
+    padding-right: 10vw;
+}
+
+/* Animation Directions */
+.animation-top .modal-dialog {
+    transform: translateY(-50px);
+}
+
+.animation-bottom .modal-dialog {
+    transform: translateY(50px);
+}
+
+.animation-left .modal-dialog {
+    transform: translateX(-50px);
+}
+
+.animation-right .modal-dialog {
+    transform: translateX(50px);
+}
+
+.animation-top.open .modal-dialog,
+.animation-bottom.open .modal-dialog,
+.animation-left.open .modal-dialog,
+.animation-right.open .modal-dialog {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+/* Modal Size Adjustments */
+.modal-size-tiny .modal-dialog {
+    width: 250px !important;
+}
+
+.modal-size-small .modal-dialog {
+    width: 320px !important;
+}
+
+.modal-size-medium .modal-dialog {
+    width: 420px !important;
+}
+
+.modal-size-big .modal-dialog {
+    width: 800px !important;
+    /* height: 600px; */
+}
+
+.modal-size-huge .modal-dialog {
+    width: 700px !important;
+}
+
+.error-banner {
+    background-color: #fdecea;
+    color: #b71c1c;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.success-banner {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+    .close-image {
+        right: 10px;
+    }
+
+    .image-preview-wrapper {
+        width: 100%;
+    }
+}
+
+/* Responsive fixes for very small screens */
+@media only screen and (max-width: 420px) {
+    .modal-box {
+        width: 95% !important;
+        max-width: 95% !important;
+        padding: 0 10px;
+    }
+    
+    .modal-dialog {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+    
+    .modal-dialog .modal-content {
+        padding: 10px 5px !important;
+    }
+    
+    .modal-dialog .modal-content .modal-data {
+        max-height: 70vh !important;
+    }
+    
+    
+    .modal-size-medium .modal-dialog {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .modal-size-big .modal-dialog {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .modal-size-huge .modal-dialog {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+   
+    .modal-dialog .modal-content .close {
+        top: -15px;
+        right: -15px;
+    }
+    
+    .close svg {
+        width: 30px !important;
+        height: 30px !important;
+    }
+}
+
+/* .add-vital-btn{
+    width: 60%;
+    padding: 0.5rem 1rem;
+    background: #e6e4ef;
+    border: 1px solid #b8aef2;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #4b3b8b;
+    cursor: pointer;
+} */

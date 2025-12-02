@@ -1,0 +1,104 @@
+.rx-folder-shimmer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 1rem;
+}
+
+.shimmer-card {
+    display: flex;
+    gap: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+}
+
+.shimmer-thumbnail {
+    position: relative;
+    width: clamp(100px, 20vw, 120px);
+    height: clamp(80px, 20vw, 130px);
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.shimmer-preview {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    animation: shimmer 2s infinite linear;
+}
+
+.shimmer-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shimmer-line {
+    height: 12px;
+    width: 100%;
+    background: #eee;
+    border-radius: 4px;
+    animation: shimmer 2s infinite linear;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+}
+
+.shimmer-line.short {
+    width: 40%;
+}
+
+.shimmer-btn-group {
+    display: flex;
+    align-items: center;
+    gap: clamp(3px, 0.5vw, 5px);
+    margin-top: 10px;
+}
+
+.shimmer-btn {
+    width: clamp(50px, 20vw, 150px);
+    height: clamp(30px, 2.3vw, 40px);
+    border-radius: 20px 0 0 20px;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    animation: shimmer 2s infinite linear;
+}
+
+.shimmer-icon {
+    width: clamp(30px, 2.3vw, 35px);
+    height: clamp(30px, 2.3vw, 40px);
+    border-radius: 0 20px 20px 0;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    animation: shimmer 2s infinite linear;
+}
+
+.shimmer-status-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: start;
+}
+
+.shimmer-badge,
+.shimmer-date {
+    height: 24px;
+    border-radius: 4px;
+    width: 80px;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    animation: shimmer 2s infinite linear;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -800px 0;
+    }
+    100% {
+        background-position: 800px 0;
+    }
+}

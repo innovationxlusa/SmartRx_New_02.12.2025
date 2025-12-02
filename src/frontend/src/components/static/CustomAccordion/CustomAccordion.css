@@ -1,0 +1,78 @@
+/* .custom-accordion {
+    transition: display 0.3s ease;
+}
+
+.accordion-item {
+    transition: display 0.3s ease;
+}
+
+.collapsed,
+.custom-accordion .accordion-button:not(.collapsed) {
+    border-radius: 9px;
+    transition: display 0.3s ease;
+}
+
+.custom-accordion .accordion-header {
+    font-family: "Georama";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    color: #4b3b8b;
+    color: var(--theme-font-color);
+}
+
+.custom-accordion .accordion-body {
+    background: #ffffff;
+    border-radius: 8px;
+    font-family: "Georama";
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #65636e;
+    margin-top: 1px;
+}
+
+.accordion-button::after {
+    display: none !important;
+} */
+
+/* new code start here */
+
+
+.custom-accordion .accordion-header {
+    font-family: "Georama";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--theme-font-color, #4b3b8b);
+}
+
+.custom-accordion .accordion-body {
+    border-radius: 8px;
+    font-family: "Georama";
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #65636e;
+    margin-top: 1px;
+}
+
+/* .accordion-button::after {
+    display: none !important;
+} */
+
+/* .accordion-button {
+    background: transparent;
+} */
+
+.accordion-button.collapsed {
+    border-radius: 9px;
+}
+
+/* new code end */
+.investigation-test-center-body{
+     padding: 0px !important;
+  /* Top    Right   Bottom  Left */
+}

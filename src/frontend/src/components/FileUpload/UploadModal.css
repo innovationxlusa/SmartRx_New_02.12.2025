@@ -1,0 +1,521 @@
+.upload-modal-container {
+    display: flex;
+    flex-direction: column;
+    font-family: "Georama";
+    /* Increased modal height for better content display */
+    height: 100%;
+    max-height: 85vh; /* Increased from 76vh to 85vh */
+    overflow-y: auto;
+    margin-top: 16px;
+    /* Ensure proper flex distribution */
+    flex: 1;
+    min-height: 0; /* Allow flex items to shrink */
+}
+
+/* Responsive adjustments with increased modal height */
+@media only screen and (max-width: 479px) { /* xs */
+    .upload-modal-container { 
+        margin-top: 8px; 
+        max-height: 80vh; /* Increased from 70vh to 80vh */
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) { /* sm */
+    .upload-modal-container { 
+        margin-top: 10px; 
+        max-height: 82vh; /* Increased from 72vh to 82vh */
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) { /* md */
+    .upload-modal-container { 
+        margin-top: 12px; 
+        max-height: 84vh; /* Increased from 74vh to 84vh */
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1279px) { /* lg */
+    .upload-modal-container { 
+        margin-top: 16px; 
+        max-height: 90vh; /* Increased for big screens like 1024x600/800 */
+    }
+    
+    /* Specific optimizations for 1024x600/800 screens */
+    .camera-container {
+        height: 40vh; /* Increased from 30vh */
+        max-height: 450px; /* Increased from 300px */
+    }
+    
+    .carousel-main img {
+        max-height: 300px; /* Increased from 200px */
+    }
+    
+    .carousel-thumbnails {
+        height: 150px; /* Increased from 120px */
+    }
+}
+/* Specific optimization for 1024x600 screens */
+@media only screen and (min-width: 1024px) and (max-height: 600px) {
+    .upload-modal-container {
+        max-height: 95vh; /* Maximum height for 1024x600 screens */
+        margin-top: 8px;
+        width: 100%; /* Ensure full width usage */
+    }
+    
+    .camera-container {
+        height: 35vh;
+        max-height: 350px;
+    }
+    
+    .carousel-main img {
+        max-height: 250px;
+    }
+    
+    .carousel-thumbnails {
+        height: 130px;
+    }
+    
+    .upload-section {
+        margin-bottom: 8px;
+    }
+}
+
+/* Specific optimization for 1024x800 screens */
+@media only screen and (min-width: 1024px) and (min-height: 800px) {
+    .upload-modal-container {
+        max-height: 85vh; /* Optimized for 1024x800 screens */
+        margin-top: 20px;
+        width: 100%; /* Ensure full width usage */
+    }
+    
+    .camera-container {
+        height: 45vh;
+        max-height: 500px;
+    }
+    
+    .carousel-main img {
+        max-height: 350px;
+    }
+    
+    .carousel-thumbnails {
+        height: 160px;
+    }
+}
+
+/* Specific optimization for screens with limited height (like 1024x600) */
+@media only screen and (max-height: 700px) {
+    .upload-modal-container {
+        max-height: 77vh; /* Increased from 65vh to 75vh */
+        margin-top: 8px;
+    }
+    
+    .camera-container {
+        height: 25vh;
+        max-height: 250px;
+    }
+    
+    .carousel-main img {
+        max-height: 180px;
+    }
+    
+    .carousel-thumbnails {
+        height: 100px; /* Increased from 80px to 100px */
+    }
+    
+    .upload-section {
+        margin-bottom: 10px;
+    }
+}
+
+/* Modal width and height optimizations for big screens */
+@media only screen and (min-width: 1024px) {
+    /* Override modal dialog width for big screens */
+    .modal-dialog {
+        width: 90% !important;
+        max-width: 800px !important; /* Increased from default 400px */
+    }
+    
+    .upload-modal-container {
+        width: 100%;
+    }
+    
+    /* Optimize upload sections for wider modal */
+    .upload-list {
+        flex-direction: row; /* Change to horizontal layout for big screens */
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .upload-item {
+        flex: 1;
+        min-width: 150px;
+        max-width: 200px;
+    }
+    
+    /* Optimize carousel layout for wider screens */
+    .image-carousel {
+        padding: 0 1rem; /* Add horizontal padding */
+    }
+    
+    .carousel-thumbnails {
+        justify-content: center; /* Center thumbnails on wide screens */
+        padding: 1rem 0;
+    }
+    
+    .carousel-main img {
+        max-width: 100%; /* Allow images to be larger on wide screens */
+    }
+}
+
+@media only screen and (min-width: 1280px) { /* xl+ */
+    .upload-modal-container { 
+        margin-top: 20px; 
+        max-height: 85vh; /* Increased from 76vh to 85vh for large screens */
+    }
+    
+    /* Even larger modal for very big screens */
+    .modal-dialog {
+        width: 95% !important;
+        max-width: 900px !important;
+    }
+}
+
+.upload-section {
+    margin-bottom: 15px; /* Reduced margin for better space utilization */
+}
+
+.upload-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.primary-tab-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.24px;
+    color: var(--theme-font-color);
+}
+
+.upload-item {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.upload-item:hover {
+    background-color: var(--theme-hover-color);
+}
+
+.upload-icon-container {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-icon-container svg {
+    fill: #242424;
+}
+
+.upload-label {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.24px;
+    color: #242424;
+    margin-left: 10px;
+}
+
+.upload-item:hover .upload-label,
+.upload-item:hover .upload-icon-container svg {
+    color: var(--theme-font-color);
+}
+
+.video-container {
+    margin-top: 20px;
+}
+
+.camera-preview-container {
+    padding: 1rem;
+    text-align: center;
+}
+
+.camera-video {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    max-height: 60vh;
+    object-fit: cover;
+}
+
+.camera-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    position: sticky; /* Make it sticky at bottom */
+    bottom: 0;
+    background: #fff;
+    padding: 0.5rem 0.25rem;
+    overflow: visible; /* no internal scrolling */
+    flex-shrink: 0; /* Don't shrink */
+    z-index: 2; /* Ensure it stays on top */
+    box-shadow: 0 -1px 0 rgba(0,0,0,0.08); /* Subtle shadow */
+}
+
+.image-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-height: 0; /* Allow flex items to shrink */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.carousel-thumbnails {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    scroll-snap-type: x mandatory;
+    cursor: grab;
+    user-select: none; /* Prevent text selection during scroll */
+    touch-action: pan-x; /* Only allow horizontal touch scrolling */
+    height: 100px; /* Increased from 110px to 140px */
+}
+
+.carousel-thumbnails::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+.carousel-thumbnails:active {
+    cursor: grabbing;
+}
+
+/* Rest of your existing CSS... */
+
+.carousel-thumb {
+    position: relative;
+    flex: 0 0 auto;
+    border: 2px solid transparent;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.carousel-thumb.active {
+    border-color: var(--theme-font-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.carousel-thumb img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.carousel-thumb.active img {
+    width: 50px;
+    height: 70px;
+    transition: all 0.3s ease-in-out;
+}
+
+.delete-thumb {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 13px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.delete-thumb svg {
+    font-weight: 900;
+    font-size: 19px;
+}
+
+.carousel-main {
+    transition: all 0.3s ease-in-out;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0; /* Allow flex items to shrink */
+    width: 100%;
+}
+
+.carousel-main img {
+    width: 100%;
+    max-height: 240px; /* Reduced height for better fit */
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.5rem; /* Reduced margin */
+    transition: all 0.3s ease-in-out;
+    padding: 0;
+    margin: 0;
+}
+
+/* Add these styles to your existing CSS */
+
+.carousel-thumb.add-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border: 1px dashed #ccc;
+    cursor: pointer;
+    width: 50px;
+    height: 70px;
+}
+
+.carousel-thumb.add-more:hover {
+    background-color: #e0e0e0;
+}
+
+.plus-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--theme-font-color);
+}
+
+.camera-controls {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.camera-container {
+    position: relative;
+    width: 100%;
+    height: 35vh; /* Reduced height for better fit */
+    max-height: 400px; /* Reduced maximum height */
+    margin: 0.5rem 0; /* Reduced margin */
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0; /* Don't shrink */
+}
+
+.camera-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video fills container while maintaining aspect ratio */
+}
+
+/* .camera-video {
+    width: 100%;
+    max-height: 650px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-top: 1rem;
+} */
+
+.webcam-loading-spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    border-radius: 8px;
+}
+
+.webcam-loading-spinner .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid white;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+.webcam-loading-spinner p {
+    color: white;
+    font-size: 14px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.camera-video {
+    position: relative; /* Needed for absolute positioning of spinner */
+}
+
+@media only screen and (max-width: 767px) {
+    .carousel-thumbnails {
+        height: 100px; /* Increased from 80px to 100px */
+    }
+
+    .carousel-thumb img {
+        width: 35px;
+        height: 50px;
+    }
+
+    .carousel-thumb.active img {
+        width: 35px;
+        height: 55px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .carousel-thumb.add-more {
+        width: 35px;
+        height: 50px;
+    }
+
+    .carousel-thumb.add-more:active {
+        background-color: #e0e0e0;
+    }
+
+    .delete-thumb {
+        top: -5px;
+        right: -5px;
+        width: 16px;
+        height: 16px;
+        font-weight: 900;
+        font-size: 10px;
+    }
+
+    .delete-thumb svg {
+        font-size: 16px;
+    }
+
+    .carousel-thumb.active .delete-thumb svg {
+        /* padding-left: 1px; */
+        font-size: 16px;
+    }
+
+    .carousel-main img {
+        max-height: 250px; /* Further reduced for mobile */
+    }
+    
+    .camera-container {
+        height: 30vh;
+        max-height: 300px;
+    }
+}

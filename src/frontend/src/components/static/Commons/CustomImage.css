@@ -1,0 +1,86 @@
+.avatar-tiny {
+    width: 2em;
+    height: 2em;
+    font-size: 0.8rem;
+}
+
+.avatar-small {
+    width: 3em;
+    height: 3em;
+    font-size: 1rem;
+}
+
+.avatar-medium {
+    width: 4em;
+    height: 4em;
+    font-size: 1.2rem;
+}
+
+.avatar-large {
+    width: 6em;
+    height: 6em;
+    font-size: 1.5rem;
+}
+
+.avatar-big {
+    width: 8em;
+    height: 8em;
+    font-size: 2rem;
+}
+
+/* Responsive scaling */
+@media (max-width: 768px) {
+    .avatar-tiny {
+        width: 1.8em;
+        height: 1.8em;
+        font-size: 0.7rem;
+    }
+    .avatar-small {
+        width: 2.5em;
+        height: 2.5em;
+        font-size: 0.9rem;
+    }
+    .avatar-medium {
+        width: 3.5em;
+        height: 3.5em;
+        font-size: 1rem;
+    }
+    .avatar-large {
+        width: 5em;
+        height: 5em;
+        font-size: 1.3rem;
+    }
+    .avatar-big {
+        width: 6.5em;
+        height: 6.5em;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .avatar-tiny {
+        width: 1.5em;
+        height: 1.5em;
+        font-size: 0.6rem;
+    }
+    .avatar-small {
+        width: 2em;
+        height: 2em;
+        font-size: 0.8rem;
+    }
+    .avatar-medium {
+        width: 3em;
+        height: 3em;
+        font-size: 0.9rem;
+    }
+    .avatar-large {
+        width: 4em;
+        height: 4em;
+        font-size: 1.1rem;
+    }
+    .avatar-big {
+        width: 5em;
+        height: 5em;
+        font-size: 1.5rem;
+    }
+}

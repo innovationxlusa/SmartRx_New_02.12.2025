@@ -1,0 +1,40 @@
+services:
+  smartrx_frontend:
+    build:
+      context: ./src/frontend
+      dockerfile: Dockerfile
+    container_name: smartrx_frontend
+    ports:
+      - 3000:3000
+    networks:
+      - smartrx-network
+
+  smartrx_backend:
+    build:
+      context: ./src/backend
+      dockerfile: Dockerfile
+    container_name: smartrx_backend
+    ports:
+      - 8080:8080
+    networks:
+      - smartrx-network
+
+  smartrx_proxy:
+    build:
+      context: ./nginx-docker
+      dockerfile: DockerFile
+    container_name: smartrx_proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - smartrx-network
+    depends_on:
+      - smartrx_frontend
+      - smartrx_backend
+    volumes:
+      - ./nginx-docker/ssl:/etc/nginx/ssl
+
+networks:
+  smartrx-network:
+    driver: bridge

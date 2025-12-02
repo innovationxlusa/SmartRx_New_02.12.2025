@@ -1,0 +1,169 @@
+.patient-list-item {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #E5E5E5;
+    background: white;
+    transition: background-color 0.2s ease;
+}
+
+.patient-list-item:hover {
+    background-color: #F8F9FA;
+}
+
+.patient-list-item:last-child {
+    border-bottom: none;
+}
+
+.patient-avatar {
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+.avatar-image {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #E5E5E5;
+}
+
+.patient-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* gap: 4px; */
+}
+
+.patient-info {
+    margin: 0;
+    padding: 0;
+    line-height: 15px;
+}
+
+.patient-info span:first-child {
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #65636E;
+}
+
+.patient-info span:last-child {
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #65636E;
+}
+
+.patient-row-title {
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.006em;
+    color: #65636E;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.patient-status {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.status-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.waiting-icon {
+    background-color: #FFC107;
+}
+
+.rx-only-icon {
+    background-color: #DC3545;
+}
+
+.status-badge-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: white;
+    min-width: 60px;
+    text-align: center;
+}
+
+.status-badge.smart-rx {
+    background-color: #28A745;
+}
+
+.status-badge.waiting {
+    background-color: #FFC107;
+}
+
+.status-badge.rx-only {
+    background-color: #DC3545;
+}
+
+.status-badge.unknown {
+    background-color: #6C757D;
+}
+
+.total-count {
+    background: #E6E4EF;
+    border: 1px solid #E6E4EF;
+    border-radius: 3px;
+    text-align: center;
+    min-width: 60px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 96.3%;
+    letter-spacing: -0.005em;
+    color: #4B3B8B;
+    width: 100%;
+    padding: 7px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .patient-list-item {
+        padding: 12px 0;
+    }
+
+    .avatar-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .status-badge {
+        font-size: 9px;
+        padding: 3px 6px;
+        min-width: 50px;
+    }
+
+    .total-count {
+        /* font-size: 11px; */
+    }
+}

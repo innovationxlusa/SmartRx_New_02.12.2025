@@ -1,0 +1,327 @@
+@font-face {
+    font-family: "Georama";
+    src: url("/src/assets/font/Georama/static/Georama-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Georama";
+    src: url("/src/assets/font/Georama/static/Georama-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Georama";
+    src: url("/src/assets/font/Georama/static/Georama-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Georama";
+    src: url("/src/assets/font/Georama/static/Georama-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Solitreo-Regular";
+    src: local("Solitreo-Regular"), url(/src/assets/font/google-font/Solitreo-Regular.ttf) format("opentype");
+    font-weight: bold;
+    font-style: normal;
+    font-size: 28px;
+}
+
+@font-face {
+    font-family: "Lemon";
+    src: local("Lemon-Regular"), url(/src/assets/font/google-font/Lemon-Regular.ttf) format("opentype");
+    font-weight: bold;
+    font-style: normal;
+    font-size: 28px;
+}
+
+@font-face {
+    font-family: "Mali";
+    src: url("/src/assets/font/Mali/Mali-SemiBold.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ABeeZee";
+    src: url("/src/assets/font/google-font/ABeeZee-Regular.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("/src/assets/font/SourceSansPro/SourceSansPro-Bold.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("/src/assets/font/google-font/Urbanist-Italic-VariableFont_wght.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/src/assets/font/google-font/Inter/static/Inter_18pt-Regular.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("/src/assets/font/google-font/PlusJakartaSans/static/PlusJakartaSans-Regular.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* bengali */
+@font-face {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: 100%;
+    src: url(https://fonts.gstatic.com/s/notosansbengali/v28/Cn-SJsCGWQxOjaGwMQ6fIiMywrNJIky6nvd8BjzVMvJx2mcSPVFpVEqE-6KmsolLicWu8xzI.woff2) format("woff2");
+    unicode-range: U+0951-0952, U+0964-0965, U+0980-09FE, U+1CD0, U+1CD2, U+1CD5-1CD6, U+1CD8, U+1CE1, U+1CEA, U+1CED, U+1CF2, U+1CF5-1CF7, U+200C-200D, U+20B9, U+25CC, U+A8F1;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: 100%;
+    src: url(https://fonts.gstatic.com/s/notosansbengali/v28/Cn-SJsCGWQxOjaGwMQ6fIiMywrNJIky6nvd8BjzVMvJx2mcSPVFpVEqE-6KmsolLidmu8xzI.woff2) format("woff2");
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+        U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: 100%;
+    src: url(https://fonts.gstatic.com/s/notosansbengali/v28/Cn-SJsCGWQxOjaGwMQ6fIiMywrNJIky6nvd8BjzVMvJx2mcSPVFpVEqE-6KmsolLideu8w.woff2) format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+    --app-theme-color: #4b3b8b;
+    --theme-font-color: #4b3b8b;
+    --normal-view-switch-button-label-color: #65636e;
+    --content-header: #040404;
+    --content-color: #65636e;
+    --content-color-1: #65636e;
+    --overlay-color: #e6e4ef;
+    --app-theme-background: #ffffff;
+    --app-header-footer-icon: #ffffff;
+    --section-header: #000000;
+    --button-color: #4b3b8b;
+    --overview-border: #65636e;
+    --overview-content-header: #373639;
+    --text-white: #ffffff;
+    --theme-hover-color: #d1c4e9;
+    --theme-button-hover-color: #3a2b6b;
+    --sub-modal-color: #fdc34b;
+}
+
+html,
+body {
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    scroll-behavior: smooth !important;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+.scrollbar-hidden {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+}
+
+.app-padding-bottom {
+    padding-bottom: 70px;
+}
+
+.main-scroll-container {
+    scroll-margin-top: 100px;
+}
+
+.content-container {
+  animation: contentContainerFadeIn .7s ease-in;
+}
+
+@keyframes contentContainerFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+h2,
+body,
+label,
+table,
+.btn,
+.page-name,
+.step-text,
+.dropdown-item,
+.accordion-header,
+.search-input::placeholder {
+    font-family: "Georama", sans-serif;
+    
+}
+
+.page-name {
+    color: var(--theme-font-color);
+    font-size: 24px;
+    /* margin-left: 69px; */
+}
+
+.App-header {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    html,
+    body {
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow-x: hidden !important;
+        overflow-y: visible !important;
+        /* height: 93vh;
+        max-height: 93vh; */
+
+        height: auto;
+        max-height: none;
+    }
+}
+
+.scrollbar-thin-custom::-webkit-scrollbar {
+    height: 1px;
+}
+
+.scrollbar-thin-custom::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollbar-thin-custom::-webkit-scrollbar-thumb {
+    background-color: #65636e;
+    border-radius: 2px;
+}
+
+.scrollbar-thin-custom {
+    scrollbar-width: thin;
+    scrollbar-color: #65636e transparent;
+}
+
+/* Base styles for mobile */
+.color-green {
+    color: green !important;
+}
+
+.color-gray {
+    color: gray !important;
+}
+
+.color-red {
+    color: red !important;
+}
+
+.color-blue {
+    color: blue !important;
+}
+
+/* Medium screens (≥768px) */
+@media (min-width: 768px) {
+    .color-green {
+        color: #28a745 !important;
+        /* Bootstrap green */
+    }
+
+    .color-gray {
+        color: #6c757d !important;
+        /* Bootstrap gray */
+    }
+
+    .color-red {
+        color: #dc3545 !important;
+        /* Bootstrap red */
+    }
+
+    .color-blue {
+        color: blue !important;
+    }
+}
+
+/* Large screens (≥1024px) */
+@media (min-width: 1024px) {
+    .color-green {
+        color: #1e7e34 !important;
+        /* Darker green */
+    }
+
+    .color-gray {
+        color: #343a40 !important;
+        /* Darker gray */
+    }
+
+    .color-red {
+        color: #bd2130 !important;
+        /* Darker red */
+    }
+
+    .color-blue {
+        color: blue !important;
+    }
+}

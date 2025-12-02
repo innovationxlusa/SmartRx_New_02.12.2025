@@ -1,0 +1,343 @@
+/* Tabbed styles */
+.tabbed-vital {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.vital-tabs {
+    display: flex;
+    background-color: transparent;
+    border-radius: 1px 1px 0 0;
+    padding: 2px;
+    margin-bottom: 0;
+    gap: 2px;
+    width: 100%;
+}
+
+.vital-tabs .tab {
+    background: transparent;
+    border: 1px solid #65636e;
+    cursor: pointer;
+    font-size: 10px;
+    color: #65636e;
+    font-weight: 800;
+    opacity: 1;
+    transition: all 0.2s ease;
+    border-radius: 1px;
+    font-family: "Georama";
+    width: 100%
+}
+
+.vital-tabs .tab:hover {
+    background-color: white;
+}
+
+.vital-tabs .tab.active {
+    background-color: #4b3b8b;
+    color: white;
+    font-weight: 800;
+    opacity: 1;
+}
+
+.content-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+@media (max-width: 768px) {
+  .custom-table th,
+  .custom-table td {
+    font-size: 8px;
+    padding: 4px 6px;
+  }
+}
+
+.table-header-row th {
+  background-color: #e6e4ef !important;  
+  color: #4b3b8b !important;
+  font-weight: 800;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 8px 12px;
+  font-family: "Georama";
+  position: sticky;
+  border: 2px solid #fff !important;
+  box-shadow: 0 2px 3px 0 #b4b2b2 !important;
+  cursor: pointer;
+  white-space: nowrap;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table-header-row th:last-child {
+  box-shadow: 0 2px 3px 0 #b4b2b2 !important;
+  background-color: #e6e4ef !important;
+  border: 2px solid #fff !important;
+  position: sticky !important;
+  z-index: 10 !important;
+}
+
+.table-header-row th:nth-child(4) {
+  box-shadow: 0 2px 3px 0 #b4b2b2 !important;
+  background-color: #e6e4ef !important;
+  border: 2px solid #fff !important;
+}
+
+.th-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  font-size: 8px;
+  
+}
+
+.sort-icons {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.sort-icon {
+  font-size: 10px;
+  transform: scaleY(1.2) scaleX(0.7);
+  margin: -2px 0;
+  color: white;
+  height: 18px;
+  width: 9px; 
+  margin: -9px 0;
+  cursor: pointer;
+}
+
+.sort-icon.active {
+  color: #65636e;
+}
+
+.table-body-row td {
+  color: #65636e !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  font-size: 8px !important;
+  font-family: "Georama" !important;
+  border: 1px solid #e6e4ef !important;        
+}
+
+.two-line {
+  white-space: pre-line;
+}
+
+.pt-vital-select-date {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+  margin: 5px 0;
+  width: 100%;
+}
+
+.pt-vital-select-date .date-container {
+  flex: 1;
+  min-width: 100px;
+}
+
+.testDate {
+  width: 100% !important; 
+  font-size: 14px !important;
+  padding: 6px 10px !important;
+  max-width: none !important;
+}
+
+
+@media (max-width: 768px) {
+  .testDate {
+    font-size: 13px !important;
+    padding: 5px 8px !important;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .pt-vital-select-date {
+    flex-wrap: nowrap;
+  }
+
+  .date-container {
+    flex: 1;
+    min-width: 80px;
+  }
+
+  .testDate {
+    font-size: 12px !important;
+    padding: 4px 6px !important;
+  }
+}
+
+.react-datepicker {
+  font-size: 12px !important;
+  border: 1px solid #65636e !important;
+}
+
+@media (max-width: 768px) {
+  .react-datepicker {
+    font-size: 11px;
+    transform: scale(0.9);
+    transform-origin: top;
+  }
+}
+
+@media (max-width: 480px) {
+  .react-datepicker {
+    font-size: 12px;
+    transform: scale(0.7);
+    transform-origin: top;
+  }
+}
+
+.vitalFromDate input::placeholder {
+  font-family: "Georama", sans-serif;
+}
+
+.testDate {
+    height: 36px;
+}
+
+.search-input[name="SystolicValue"]::placeholder {
+    font-size: 11px;
+}
+
+.testDate::placeholder{
+  font-family: "Georama", sans-serif !important;
+}
+
+.view-text {
+  color: #4b3b8b;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.view-text:hover {
+  color: #4b3b8b;
+}
+
+.table-body-row td:last-child {
+  position: relative;
+}
+
+
+.std-details-cell {
+  position: relative;
+}
+
+.vital-tooltip-text {
+  position: absolute;
+  bottom: calc(100% - 10px);
+  right: 0;
+  background-color: #fff;
+  color: #65636e;
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(51, 11, 88, 0.213);
+  z-index: 1000;
+  min-width: 160px;
+  max-width: 220px;
+  white-space: normal;
+  word-wrap: break-word;
+  font-family: "Georama", sans-serif;
+  border: 2px solid #e6e4ef;
+  animation: tooltipFadeIn 0.3s ease-in-out;
+  line-height: 1.4;
+}
+
+.vital-tooltip-text::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 15px;
+  border: 6px solid transparent;
+  border-top-color: #fff;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+@keyframes tooltipFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .vital-tooltip-text {
+    min-width: 140px;
+    max-width: 180px;
+    padding: 8px 12px;
+    font-size: 8px;
+    right: 0;
+    bottom: calc(100% - 10px);
+  }
+  
+  .vital-tooltip-text::after {
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vital-tooltip-text {
+    position: absolute;
+    bottom: calc(100% - 10px);
+    right: 0;
+    left: auto;
+    min-width: 120px;
+    max-width: 150px;
+    padding: 8px 10px;
+    font-size: 7px;
+    transform: none;
+    line-height: 1.3;
+  }
+  
+  .vital-tooltip-text::after {
+    right: 15px;
+    border-width: 5px;
+  }
+}
+
+.pagination .page-link {
+  font: "Georama" !important;
+  color: #4b3b8b !important;
+  border-color: #dee2e6 !important;
+}
+
+.pagination .page-link:hover {
+  color: #4b3b8b !important;
+  background-color: #e6e4ef !important;
+  border-color: #4b3b8b !important;
+  font: "Georama" !important;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #4b3b8b !important;
+  border-color: #4b3b8b !important;
+  color: white !important;
+  font: "Georama" !important;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #6c757d !important;
+  background-color: #fff !important;
+  border-color: #dee2e6 !important;
+}
+

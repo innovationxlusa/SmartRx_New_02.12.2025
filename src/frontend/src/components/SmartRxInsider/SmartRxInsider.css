@@ -1,0 +1,805 @@
+.sri-sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--bg-white, #fff);
+}
+
+.sri-sticky-header .page-title,
+.sri-sticky-header .docGeneral,
+.sri-sticky-header .horizontal-menu {
+    background: inherit;
+}
+
+@media (max-width: 576px) {
+    .sri-sticky-header { top: 0; }
+}
+.ptInfo {
+    display: flex;
+    flex-direction: row;
+}
+
+.smartrx-sticky {
+    position: sticky;
+    /* Offset equals MainLayout/header height so sticky never crosses it */
+    top: var(--main-header-height, 80px);
+    z-index: 1000;
+    background: var(--bg-white, #fff);
+    /* Do not exceed the visible area below MainLayout */
+    max-height: calc(100vh - var(--main-header-height, 80px));
+    overflow: hidden;
+    /* Subtle separation from content */
+    box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+    /* Span full viewport width even inside centered container */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.smartRx-header {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  background: #fff;
+  padding: 8px 0 0 0;
+  max-width: 615px;
+  margin: auto;
+}
+.smartRx-header-spacer {
+  height: 140px; /* Adjust if header height changes */
+}
+
+.smartrx-sticky .page-title,
+.smartrx-sticky .docGeneral,
+.smartrx-sticky .horizontal-menu {
+    background: inherit;
+}
+
+@media (max-width: 576px) {
+    .smartrx-sticky {
+        top: var(--main-header-height, 80px);
+        max-height: calc(100vh - var(--main-header-height, 80px));
+    }
+}
+
+/* Ensure the horizontal menu remains usable on small screens */
+.horizontal-menu {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.horizontal-menu::-webkit-scrollbar {
+    height: 6px;
+}
+
+.horizontal-menu::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.15);
+    border-radius: 3px;
+}
+
+/* Ensure doctor general value text wraps responsively on small screens */
+.docGeneral .docGeneralData-value {
+    white-space: normal;        /* allow multi-line */
+    word-break: break-word;     /* break long words */
+    overflow-wrap: anywhere;    /* break anywhere if needed */
+    max-width: 100%;
+    min-width: 0;
+}
+
+@media (max-width: 576px) {
+    .docGeneral .docGeneralData-value {
+        font-size: 14px;        /* keep readable on small screens */
+        line-height: 1.3;
+    }
+}
+
+.ovInfo {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.ovInfo > * {
+    flex: 1 1 320px; /* slightly wider default blocks */
+    min-width: 0;     /* allow inner text to truncate/wrap */
+}
+
+.ovInfo * {
+    white-space: normal;       /* allow multi-line */
+    word-break: break-word;    /* break long words */
+    overflow-wrap: anywhere;   /* break anywhere if needed */
+}
+
+@media (max-width: 576px) {
+    .ovInfo {
+        gap: 8px;
+    }
+    .ovInfo > * {
+        flex: 1 1 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    /* On larger screens, allow a touch more width per block */
+    .ovInfo > * {
+        flex: 1 1 360px;
+    }
+}
+
+.ovHeadrer h2 {
+    font-weight: bold;
+}
+
+.chComplaint {
+    text-align: left;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.chComplaint-value {
+    font-weight: 300;
+    font-family: "Georama";
+    color: #65636e;
+    margin-left: 3px;
+    line-height: 1.5;
+}
+
+.ptHistory-value {
+    font-weight: 300;
+    font-family: "Georama";
+    color: #65636e;
+    margin-left: 3px;
+}
+
+.docInfo-value {
+    font-weight: 300;
+    font-family: "Georama";
+    color: #65636e;
+    margin-left: 3px;
+}
+
+.bold-name {
+    font-weight: 1000;
+}
+
+.data-name {
+    min-width: 20px;
+    text-align: left;
+    color: #65636e;
+    font-family: "Georama";
+    font-weight: 1000;
+    font-size: 13px;
+}
+
+.data-label {
+    min-width: 20px;
+    text-align: right;
+    color: #65636e;
+    font-family: "Georama";
+    font-weight: 1000;
+    font-size: 20px;
+}
+
+.data-value {
+    min-width: 20px;
+    text-align: left;
+    color: var(--content-color);
+    font-family: "Georama";
+    font-weight: 200;
+    font-size: 15px;
+}
+
+.data-mid {
+    font-weight: 1000;
+    font-size: 15px;
+}
+
+/* .data-value {
+    font-weight: 300;
+    font-family: "Georama";
+    color: #65636e;
+    margin-left: 3px;
+} */
+
+.generalInfo-row {
+    display: flex;
+    gap: 12px;
+    margin: 6px;
+}
+
+.generalInfo-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    flex: 1 1 0;
+}
+
+.generalInfo-item:first-child {
+    flex: 2;
+}
+
+.generalData-name {
+    margin-right: 4px;
+    font-family: "Georama";
+    font-weight: 1000;
+    font-size: 13px;
+    color: #65636e;
+    white-space: nowrap;
+}
+
+.generalData-value {
+    font-family: "Georama";
+    font-weight: 300;
+    font-size: 12.5px;
+    color: #65636e;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.docGeneral {
+    display: flex;
+    justify-content: space-between;
+        /* margin-left: 20px;
+    margin-right: 20px; */
+}
+
+.docGeneralInfo-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 6px;
+    flex-wrap: wrap;
+}
+
+.docGeneralInfo-item {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    white-space: break-spaces;
+    margin-bottom: 4px;
+}
+
+.docGeneralInfo-item:last-child {
+    justify-content: flex-end;
+}
+
+.docGeneralData-name {
+    margin-right: 4px;
+    font-family: "Georama";
+    font-weight: 1000;
+}
+
+.rxval {
+    color: #65636e;
+}
+
+.docGeneralData-name.rx,
+.docGeneralData-value.rx {
+    color: #4b3b8b;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media (max-width: 992px) {
+
+    .docGeneralData-name.rx,
+    .docGeneralData-value.rx {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .docGeneralData-name.rx,
+    .docGeneralData-value.rx {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .docGeneralData-name.rx,
+    .docGeneralData-value.rx {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 412px) {
+
+    .docGeneralData-name.rx,
+    .docGeneralData-value.rx {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 412px) {
+
+    .docGeneralData-name.rx,
+    .docGeneralData-value.rx {
+        font-size: 14px;
+    }
+}
+
+.docGeneralData-name.dated {
+    color: #65636e;
+}
+
+.docGeneralData-value {
+    font-family: "Georama", sans-serif;
+    color: #65636e;
+}
+
+.info-box {
+    bottom: 10px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.info-text {
+    font-weight: 300;
+    font-family: "Georama";
+    color: #65636e;
+    margin-left: 3px;
+}
+
+/* Tooltip */
+.info-box .tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+
+    position: absolute;
+    bottom: 25px;
+    max-width: 400px;
+    width: 180px;
+    background-color: #e6e4ef;
+    color: var(--app-theme-color);
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ebe8f4;
+    font-size: 11px;
+    z-index: 1000;
+    right: 0;
+}
+
+/* Small arrow */
+.info-box .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 4%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color:#e0e0e0 transparent transparent transparent;
+}
+
+/* Show tooltip on hover or focus (mobile) */
+.info-box:hover .tooltip-text,
+.info-box:focus .tooltip-text,
+.info-box:active .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.docInfo {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.docInfo-left {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.docInfo-row {
+    padding-left: 12px;
+    text-indent: -12px;
+}
+
+.docInfo-value {
+    font-weight: 300;
+    font-family: "Georama", sans-serif;
+    color: #65636e;
+    line-height: 1.45;
+    word-break: break-word;
+}
+
+.bold-name {
+    font-weight: 1000;
+}
+
+.docInfo-right {
+    flex: 0 0 auto;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70px;
+}
+
+.col-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    max-width: 90px;
+    margin-left: 80px;
+}
+
+/* Tablet and small desktops (e.g. 768px and below) */
+@media (max-width: 768px) {
+    .col-2 {
+        margin-left: 36px;
+        max-width: 80px;
+    }
+}
+
+/* Small mobile devices (e.g. 420px and below) */
+@media (max-width: 420px) {
+    .col-2 {
+        margin-left: 24px;
+        max-width: 60px;
+    }
+}
+
+.circle-wrapper {
+    display: flex;
+    align-items: center;
+    /* margin: 0 auto 10px;  */
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Tablet and small desktops (e.g. 768px and below) */
+@media (max-width: 768px) {
+    .circle-wrapper {
+        /* max-width: 80px; */
+    }
+}
+
+/* Small mobile devices (e.g. 420px and below) */
+@media (max-width: 420px) {
+    .circle-wrapper {
+
+        /* max-width: 60px; */
+    }
+}
+
+.default-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    /* adjust as needed */
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid white;
+    /* outer white border */
+    outline: 2px solid currentColor;
+    /* optional: ring matches bg */
+}
+
+.inner-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    /* inner circle size */
+    height: 48px;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.initials {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.default-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+.circle-outer {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 8px solid #4b3b8b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.pt-info-progress-bar-wrapper .range-labels {
+    display: none !important;
+}
+
+.pt-info-progress-bar-wrapper .slider-value {
+    transform: translateX(-60%) translateY(-80%) !important;
+}
+
+.pt-info-progress-bar-wrapper .slider-value::after {
+    content: "%";
+}
+
+.pt-info-progress-bar-wrapper .slider-wrapper {
+    position: relative;
+    width: 100% !important;
+}
+
+.profile-inner {
+    width: clamp(80px, 15vw, 100px);
+    height:clamp(80px, 15vw, 100px);
+    border-radius: 50%;
+    border: 10px solid var(--app-theme-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* This ensures the image is clipped to the rounded shape */
+}
+
+.profile-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-inner .default-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid var(--app-theme-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+.circle-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid #a39bbd;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+
+}
+
+.circle-inner span {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.circle-inner img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.initials {
+    font-family: "Georama";
+    font-weight: 800;
+    font-size: 20px;
+    color: #4b3b8b;
+}
+
+.profile-button {
+  width: clamp(80px, 10vw, 120px);
+  height: clamp(30px, 5vw, 30px);
+  align-items: center;
+  border: 1px solid #4b3b8b;
+  background: #f0eded;
+  color: #4b3b8b;
+  font-family: "Georama", sans-serif;
+  font-size: clamp(10px, 1.2vw, 14px);
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: clamp(3px, 1vw, 8px);
+}
+
+.add-button {
+    margin-top: 8px;
+    padding: 4px 12px;
+    border: 1px solid #4b3b8b;
+    background: #f0eded;
+    color: #4b3b8b;
+    font-family: "Georama";
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 200px;
+    height: 35px;
+}
+
+.all-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 20px; */
+    margin-top: 20px;
+}
+
+/* Keep your button styles */
+.fee-add-button,
+.wait-add-button,
+.rate-add-button {
+    padding: 4px 12px;
+    border: 1px solid #4b3b8b;
+    background: #f0eded;
+    color: #4b3b8b;
+    font-family: "Georama";
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 200px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.all-buttons .rate-add-button {
+    margin-bottom: -8px !important;
+    /* smaller gap after Rate button */
+}
+
+/* Tabbed modal styles */
+.tabbed-modal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-tabs {
+    display: flex;
+    background-color: transparent;
+    border-radius: 1px 1px 0 0;
+    padding: 2px;
+    margin-bottom: 0;
+    gap: 2px;
+    width: 100%;
+}
+
+.modal-tabs .tab {
+    background: transparent;
+    border: 1px solid #65636e;
+    cursor: pointer;
+    font-size: 10px;
+    color: #65636e;
+    font-weight: 800;
+    opacity: 1;
+    transition: all 0.2s ease;
+    border-radius: 1px;
+    font-family: "Georama";
+    width: 100%
+}
+
+.modal-tabs .tab:hover {
+    background-color: white;
+    /* Light gray on hover */
+}
+
+.modal-tabs .tab.active {
+    background-color: #4b3b8b;
+    color: white;
+    font-weight: 800;
+    opacity: 1;
+}
+
+.tab-content {
+    padding: 16px;
+    border-top: none;
+    background-color: white;
+}
+
+/* Content specific styles */
+.fee-options {
+    margin: 20px 0;
+}
+
+.fee-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.modal-actions button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.update-btn {
+    background-color: #4b3b8b;
+    /* Purple background */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 2px;
+    font-size: 12px;
+    font-family: "Georama";
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cancel-btn {
+    background-color: #f5f5f5;
+    color: #4b3b8b;
+    border: 1px solid #4b3b8b;
+    border-radius: 2px;
+}
+
+.search-input[name="DoctorFeeValue"]::placeholder {
+    font-size: 8px;
+}
+
+.search-input[name="TransportFeeValue"]::placeholder {
+    font-size: 8px;
+}
+
+.search-input[name="WaitTime"]::placeholder {
+    font-size: 8px;
+}
+
+.search-input[name="TravelTime"]::placeholder {
+    font-size: 8px;
+}
+
+.search-input[name="VisitTime"]::placeholder {
+    font-size: 9px;
+}
+
+.ovInfo .accordion-button {
+    height: 60px !important;
+    padding: 6px 12px !important;
+}
+
+.doc-chamber-container .accordion-button {
+    height: 60px !important;
+    padding: 6px 12px !important;
+}

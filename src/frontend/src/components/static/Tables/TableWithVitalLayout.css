@@ -1,0 +1,123 @@
+.table-container {
+    overflow: hidden;
+    border-radius: 4px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.vitals-table {
+    width: 100%;
+    border-collapse: separate !important;
+    border-spacing: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.vitals-table thead tr:first-child th:first-child {
+    border-top-left-radius: 4px;
+}
+
+.vitals-table thead tr:first-child th:last-child {
+    border-top-right-radius: 4px;
+}
+
+.vitals-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 4px;
+}
+
+.vitals-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 4px;
+}
+
+.vitals-table th,
+.vitals-table td {
+    border: 1px solid #d1d5db !important;
+    padding: 8px;
+    text-align: center;
+    background-clip: padding-box;
+}
+
+.sort-icon {
+    margin-left: 5px;
+    cursor: pointer;
+    color: var(--theme-font-color);
+}
+
+.vitals-table th {
+    background-color: var(--overlay-color);
+    color: var(--theme-font-color);
+    cursor: pointer;
+    user-select: none;
+    text-align: center; /* Centers the text horizontally */
+    vertical-align: middle; /* Centers text vertically */
+}
+
+.vitals-table td {
+    white-space: normal;
+    word-wrap: break-word; /* Not necessary but can be kept */
+    word-break: keep-all; /* Prevents breaking words in the middle */
+    overflow-wrap: break-word; /* Ensures long words move to the next line */
+    color: var(--content-color);
+    text-align: center; /* Centers the text horizontally */
+    vertical-align: middle; /* Centers text vertically */
+}
+
+.value-column {
+    width: 90px !important;
+    min-width: 20px;
+    max-width: 90px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.status-high {
+    color: red;
+}
+
+.status-normal {
+    color: green;
+}
+
+.vital-button {
+    float: left;
+    width: 100%;
+    height: 40px;
+    position: relative;
+    color: var(--content-color);
+}
+
+.vital-button label,
+.vital-button input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.vital-button input[type="radio"] {
+    opacity: 0.011;
+    z-index: 100;
+}
+
+.vital-button input[type="radio"]:checked + label {
+    background: var(--bg-theme);
+    border-radius: 4px;
+    color: white;
+}
+
+.vital-button label {
+    cursor: pointer;
+    line-height: 1.8em;
+    font-size: 1em;
+    font-weight: 700;
+    border: 1px solid #e6e4ef;
+    border-radius: 2px;
+    color: var(--content-color);
+}
+
+@media screen and (max-width: 600px) {
+    .vital-button label {
+        cursor: pointer;
+        font-size: 0.8em;
+    }
+}

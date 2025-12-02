@@ -1,0 +1,104 @@
+/* .diagnostic-comparison-box {
+    background: #fff;
+    border-radius: 10px;
+    font-family: "Inter", sans-serif;
+} */
+
+.diagnostic-section-title {
+    font-family: "Georama";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 18px;
+    color: #65636e;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.bg-success-subtle {
+    background-color: #ccffcc !important;
+    border: 1px solid #d6eedc;
+}
+
+.diagnostic-comparison-box .btn-danger {
+    background-color: #ff694b;
+    border-color: #ff694b;
+    font-weight: 600;
+}
+
+.diagnostic-comparison-box .btn-danger:hover {
+    background-color: #e85e44;
+}
+
+.diagnostic-test-price-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.diagnostic-test-price-line strong {
+    color: #333;
+}
+
+.diagnostic-test-price-list .diagnostic-test-price-line:last-child {
+    border-bottom: none !important;
+}
+
+/* .compare-drug-wrapper .accordion-button:not(.collapsed)::after {
+    background-image: var(--bs-accordion-btn-active-icon);
+    transform: var(--bs-accordion-btn-icon-transform);
+    transform: rotate(0deg);
+} */
+
+.compare-drug-wrapper .accordion-button {
+    justify-content: space-between !important;
+}
+
+/* .compare-drug-wrapper .accordion-button::after {
+    margin-left: 20px !important;
+    transform: rotate(-90deg);
+} */
+.button-container {
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically (if needed) */
+  flex-wrap: wrap;          /* Wrap on small screens */
+  gap: 1rem;                /* Space between buttons */
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.action-btn {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.action-btn:hover {
+  background-color: #0056b3;
+}
+.add-to-wishlist-center {
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+    margin-top: 2rem!important;
+    margin-bottom: 2rem!important;
+    width: 100%!important;
+}
+
+@media (max-width: 600px) {
+    .add-to-wishlist-center {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+    }
+}
+

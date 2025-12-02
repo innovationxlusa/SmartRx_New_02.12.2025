@@ -1,0 +1,38 @@
+/* Smooth Shimmer Effect */
+.doctor-profile-shimmer {
+    position: relative;
+    background: linear-gradient(90deg,
+            #eee 25%,
+            #ddd 50%,
+            #eee 75%);
+    background-size: 200% 100%;
+    animation: doctorProfileShimmer 1.7s linear infinite;
+    border-radius: 4px;
+    will-change: background-position;
+    transform: translateZ(0);
+    /* GPU acceleration */
+}
+
+/* Keyframes */
+@keyframes doctorProfileShimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Text Placeholder */
+.doctor-profile-shimmer-text {
+    height: 16px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+/* Button Placeholder */
+.doctor-profile-shimmer-btn {
+    height: 40px;
+    border-radius: 8px;
+}

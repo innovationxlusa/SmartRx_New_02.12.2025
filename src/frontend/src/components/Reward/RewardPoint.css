@@ -1,0 +1,23 @@
+/* Responsive centering for larger screens */
+@media (min-width: 768px) {
+    .point-input-section {
+        justify-content: center !important;
+        gap: 40px !important;
+    }
+    
+    .converted-money-section {
+        justify-content: center !important;
+        gap: 40px !important;
+    }
+}
+
+/* For very large screens, add more spacing */
+@media (min-width: 1200px) {
+    .point-input-section {
+        gap: 60px !important;
+    }
+    
+    .converted-money-section {
+        gap: 60px !important;
+    }
+}

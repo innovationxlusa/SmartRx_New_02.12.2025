@@ -1,0 +1,68 @@
+.skeleton-title,
+.skeleton-subtitle,
+.skeleton-line {
+    background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+    border-radius: 4px;
+    background-size: 200% 100%;
+    animation: shimmer2 1.7s infinite linear;
+}
+
+.skeleton-title {
+    width: 100px;
+    height: 18px;
+}
+
+.skeleton-subtitle {
+    width: 100px;
+    height: 14px;
+}
+
+.skeleton-line {
+    height: 12px;
+    width: 80px;
+}
+
+.skeleton-heart-icon {
+    font-size: 20px;
+    color: transparent;
+    background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shimmer2 1.5s infinite linear;
+}
+
+#skeleton-heart-icon {
+    position: relative;
+    width: 50px;
+    height: 40px;
+}
+
+#skeleton-heart-icon:before,
+#skeleton-heart-icon:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 20px;
+    height: 30px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+#skeleton-heart-icon:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+@keyframes shimmer2 {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}

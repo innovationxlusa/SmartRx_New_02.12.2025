@@ -1,0 +1,101 @@
+@PMSBackend_HostAddress = http://localhost:7000
+@accessToken = 
+@refreshToken = 
+
+### Variables are automatically saved in this file for Postman/REST Client
+
+### 0. Generate Token Directly (Quick Testing - Bypass Login)
+POST {{PMSBackend_HostAddress}}/api/Auth/generate-token
+Content-Type: application/json
+
+{
+  "userId": 1
+}
+
+### 1. Login - Get Access Token and Refresh Token (Super Admin)
+POST {{PMSBackend_HostAddress}}/api/Auth/Login
+Content-Type: application/json
+
+{
+  "userName": "superadmin",
+  "authType": 1,
+  "password": "1234"
+}
+
+### 1b. Login as Admin
+POST {{PMSBackend_HostAddress}}/api/Auth/Login
+Content-Type: application/json
+
+{
+  "userName": "admin",
+  "authType": 1,
+  "password": "1234"
+}
+
+### 1c. Login as Entry User
+POST {{PMSBackend_HostAddress}}/api/Auth/Login
+Content-Type: application/json
+
+{
+  "userName": "entryuser",
+  "authType": 1,
+  "password": "1234"
+}
+
+### 2. Login with Mobile Auth (OTP-based)
+POST {{PMSBackend_HostAddress}}/api/Auth/Login
+Content-Type: application/json
+
+{
+  "userName": "+1234567890",
+  "authType": 2
+}
+
+### 3. Verify OTP (Use after mobile login)
+POST {{PMSBackend_HostAddress}}/api/Auth/verify-otp
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "otp": "Abc@1234"
+}
+
+### 4. Refresh Token - Get new access token
+POST {{PMSBackend_HostAddress}}/api/Auth/refresh-token
+Content-Type: application/json
+
+{
+  "accessToken": "{{accessToken}}",
+  "refreshToken": "{{refreshToken}}"
+}
+
+### 5. Revoke Token - Logout from specific device
+POST {{PMSBackend_HostAddress}}/api/Auth/revoke-token
+Content-Type: application/json
+
+{
+  "refreshToken": "{{refreshToken}}"
+}
+
+### 6. Revoke All User Tokens - Logout from all devices
+POST {{PMSBackend_HostAddress}}/api/Auth/revoke-all-user-tokens
+Content-Type: application/json
+
+{
+  "userId": 1
+}
+
+### 7. Example: Use token in a protected endpoint (GET Users)
+GET {{PMSBackend_HostAddress}}/api/User
+Authorization: Bearer {{accessToken}}
+
+### 8. Example: Dashboard endpoint with token
+GET {{PMSBackend_HostAddress}}/api/Dashboard/patient-count
+Authorization: Bearer {{accessToken}}
+
+### User IDs Reference:
+### Super Admin - UserId: 1
+### Admin - UserId: 2
+### Entry User - UserId: 3
+
+###

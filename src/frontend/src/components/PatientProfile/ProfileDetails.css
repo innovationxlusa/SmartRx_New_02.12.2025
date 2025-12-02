@@ -1,0 +1,332 @@
+.table tr td {
+    border: none;
+}
+
+.testDate {
+    width: 100% !important;
+    padding: 8px !important;
+    border-radius: 5px !important;
+    border: 1px solid var(--overview-border) !important;
+    /* background-color: var(--overlay-color) !important; */
+    font-size: 14px !important;
+}
+
+.range-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.react-datepicker-wrapper {
+    display: inline-block;
+    padding: 0;
+    border: 0;
+    width: 100%;
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.left-label {
+    text-align: left;
+    width: 50px;
+    font-family: "Georama";
+}
+
+.middle-label {
+    text-align: center;
+    flex-grow: 1;
+    font-family: "Georama";
+}
+
+.right-label {
+    text-align: right;
+    width: 50px;
+    font-family: "Georama";
+}
+
+.range-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Wrapper to position value above slider */
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* .slider-value {
+  position: absolute;
+  top: 25px;
+  font-size: 14px;
+  color: #65636e;
+  padding: 4px 8px;
+  border-radius: 5px;
+  white-space: nowrap;
+  transition: left 0.1s ease-in-out;
+  font-family: "Georama";
+  background-color: transparent !important;
+  background: none !important;
+} */
+
+/* Base Slider Styling */
+.custom-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 39px;
+    border: none;
+    outline: none;
+    transition: background 0.3s ease-in-out;
+}
+
+/* WebKit Track (Chrome, Safari) */
+.custom-range::-webkit-slider-runnable-track {
+    height: 5px;
+    border-radius: 39px;
+    background: linear-gradient(90deg, #96ac57 0%, #b94cf3 46.61%, #6010c6 100%);
+}
+
+/* Firefox Track */
+.custom-range::-moz-range-track {
+    height: 5px;
+    border-radius: 39px;
+    background: rgb(213, 216, 216);
+}
+
+/* Firefox Progress */
+.custom-range::-moz-range-progress {
+    background: linear-gradient(90deg, #96ac57 0%, #b94cf3 46.61%, #6010c6 100%);
+    height: 5px;
+}
+
+/* WebKit Thumb */
+.custom-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px;
+}
+
+/* Firefox Thumb */
+.custom-range::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.labelStyle {
+    font-size: "15px !important";
+    color: "var(--overlay-color) !important";
+    font-family: "var(font-family) !important";
+}
+
+.profile-button-hover,
+.profile-gender-btn:hover {
+    background-color: #4B3B8B !important;
+    color: #fff !important;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Select Field Styling */
+.custom-select {
+    font-family: "Georama" !important;
+    color: #65636e !important;
+}
+
+.custom-select option {
+    font-family: "Georama" !important;
+    color: #65636e !important;
+    background-color: #E6E4EF !important;
+    padding: 8px !important;
+}
+
+/* Remove background color from save section */
+.save-section {
+    background-color: transparent !important;
+    background: none !important;
+}
+
+.save-section:hover {
+    background-color: #4B3B8B;
+    color: #fff;
+}
+
+.save-section:active {
+    background-color: #4B3B8B;
+    color: #fff;
+}
+
+/* Override any panel or container background */
+.profile-panel-body .save-section,
+.profile-panel-default .save-section,
+div[style*="textAlign: center"] {
+    background-color: transparent !important;
+    background: none !important;
+}
+
+.profile-panel {
+    background-color: transparent !important;
+    background: none !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+/* Ensure input text color is consistent */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+    color: #65636e !important;
+}
+
+.relation-options {
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+.custom-select-display {
+    width: 100%;
+    padding: 8px;
+    height: 36px;
+    font-size: 12px;
+    font-family: "Georama", sans-serif;
+    color: #65636e;
+    border-radius: 5px;
+    /* border: 1px solid #ccc; */
+    /* background-color: #E6E4EF; */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.custom-select-option {
+    font-family: "Georama", sans-serif;
+    color: #65636e;
+    padding: 8px;
+    font-size: 12px;
+}
+
+.custom-select-options {
+    font-size: 12px;
+    font-family: "Georama", sans-serif;
+    color: #65636e;
+    z-index: 9999;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.relation-options {
+    margin-left: -8px;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: left;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.pt-history button,
+.pt-survey button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    height: 40px;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 800;
+    font-family: "Georama", sans-serif;
+    background-color: #FAF8FA;
+    color: #4b3b8b;
+    border: 1px solid #4B3B8B;
+    border-radius: 3px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    flex: 1;
+    /* Each takes equal space */
+    min-width: 150px;
+}
+
+.pt-history,
+.pt-survey {
+    flex: 1 1 50%;
+    /* Equal width, shrink if needed, wrap if needed */
+    padding: 0 6px;
+    /* Adds spacing between buttons */
+    box-sizing: border-box;
+}
+
+.pt-history {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.pt-survey {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Optional: Slight margin on buttons to avoid cramping */
+.pt-history button,
+.pt-survey button {
+    margin: 5px;
+}
+
+@media (max-width: 480px) {
+    .button-wrapper {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .pt-history,
+    .pt-survey {
+        flex: 1 1 45%;
+        max-width: 45%;
+        padding: 0 4px;
+        box-sizing: border-box;
+    }
+
+    .pt-history,
+    .pt-survey {
+        display: flex;
+        justify-content: center;
+    }
+
+    .pt-history button,
+    .pt-survey button {
+        width: 100%;
+        height: 36px;
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+}

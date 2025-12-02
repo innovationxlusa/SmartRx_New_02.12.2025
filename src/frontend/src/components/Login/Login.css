@@ -1,0 +1,118 @@
+.signin-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.signin-box {
+    width: 100%;
+    background: var(--text-white);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.signin-header {
+    padding: 1rem;
+    font-family: "Georama";
+    text-align: center;
+    font-weight: bold;
+}
+
+.signin-header h4 {
+    color: var(--text-white);
+}
+
+.signin-body {
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.continue-btn {
+    padding: 0.75rem;
+    background: var(--button-color);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(100, 102, 241, 0.2);
+    transition: background 0.2s;
+    cursor: pointer;
+    border: 1px solid var(--button-color);
+}
+
+.google-login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid var(--button-color);
+    border-radius: 6px;
+    background: var(--button-color);
+    font-weight: 600;
+    color: var(--text-white);
+    box-shadow: 0 4px 8px rgba(100, 102, 241, 0.1);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.google-login-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.continue-btn:hover,
+.google-login-btn:hover {
+    background: #f5f5ff;
+    color: #000;
+}
+
+.signin-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.signin-footer a {
+    text-decoration: none;
+    color: #bbb;
+}
+
+.signin-footer a:hover {
+    text-decoration: underline;
+    color: var(--app-theme-color);
+}
+
+.link {
+    color: var(--app-theme-color) !important;
+}
+
+.or-divider {
+    display: flex;
+    align-items: center;
+}
+
+.or-divider .divider-line {
+    height: 1px;
+    width: 44%;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.or-divider .text {
+    padding: 0 12px 7px 12px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+}
+
+@media (max-width: 767.98px) {
+    .signin-container {
+        padding: 0 10px;
+        min-height: 80vh;
+    }
+}

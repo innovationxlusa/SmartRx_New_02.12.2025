@@ -1,0 +1,10 @@
+.tab-scroll-container {
+  overflow-x: auto;              /* Enable horizontal scroll */
+  white-space: nowrap;          /* Keep items on one line */
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE/Edge */
+}
+
+.tab-scroll-container::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
+}

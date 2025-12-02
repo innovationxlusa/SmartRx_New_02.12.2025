@@ -1,0 +1,12 @@
+.rx-success {
+  background-image: linear-gradient(rgb(116, 63, 3), rgb(222, 217, 118));
+  color: #fff;
+}
+.rx-info {
+  background-image: linear-gradient(rgb(2, 72, 67), rgb(127, 177, 234));
+  color: #fff;
+}
+.rx-smart {
+  background-image: linear-gradient(rgb(79, 17, 120), rgb(220, 135, 234));
+  color: #fff;
+}

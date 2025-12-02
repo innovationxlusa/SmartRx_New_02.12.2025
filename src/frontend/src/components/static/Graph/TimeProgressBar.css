@@ -1,0 +1,106 @@
+.time-progress-bar {
+    position: relative;
+    width: 100%;
+    padding: 48px 0; /* space above & below for labels/indicator */
+    font-family: "Georama";
+    margin-top: 20px;
+}
+
+/* ===== BAR ===== */
+.bar {
+    display: flex;
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.segment.wait-time {
+    background: #e7c905; /* yellow */
+}
+
+.segment.doctor-visit-time {
+    background: #06b815; /* green */
+}
+
+.segment.travel-time {
+    background: #3B82F6; /* blue */
+}
+
+/* ===== THRESHOLD LABELS ===== */
+.range-label {
+    position: absolute;
+    top: 32px;
+    transform: translateX(-50%);
+    font-weight: 600;
+    color: #06b815;
+    user-select: none;
+    white-space: nowrap;
+}
+
+/* ===== CURRENT VALUE INDICATOR ===== */
+.value-indicator-dt {
+    position: absolute;
+    top: -1px; /* sit above the bar */
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: left 0.5s ease; /* smooth slide when value changes */
+}
+
+.value-indicator-tt {
+    position: absolute;
+    top: -1px; 
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: left 0.5s ease; /* smooth slide when value changes */
+}
+
+.value-indicator-wt {
+    position: absolute;
+    bottom: -1px; /* sit above the bar */
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: left 0.5s ease; /* smooth slide when value changes */
+}
+
+.value-box {
+    min-width: 36px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap; /* keep percentage on one line */
+}
+
+.value-pointer {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 12px solid; /* color injected inline */
+}
+.value-pointer--down { 
+    width: 0;
+    height: 0;
+    border-top: 0; 
+    border-bottom: 12px solid; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+/* ===== UNIT LABEL ===== */
+.unit-label {
+    position: absolute;
+   
+    right: 0;
+    font-weight: 600;
+    color: #06b815;
+    user-select: none;
+    white-space: nowrap;
+}

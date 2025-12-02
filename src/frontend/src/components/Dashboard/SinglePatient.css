@@ -1,0 +1,634 @@
+.card-container {
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.chart-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.chart-section .col-6 {
+    padding: 0 2px;
+}
+
+.chart-section .row {
+    margin: 0 -2px;
+}
+
+.chart-container {
+    min-height: 320px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    height: 100%;
+}
+
+.chart-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .chart-container {
+        min-height: 280px;
+        margin-bottom: 10px;
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .chart-container {
+        min-height: 240px;
+        padding: 6px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .chart-container {
+        min-height: 220px;
+        padding: 4px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .chart-container {
+        min-height: 200px;
+        padding: 3px;
+    }
+}
+
+.page-title-container {
+    position: relative;
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-bar-wrapper {
+    position: relative;
+    width: 55%;
+    margin-right: 50px;
+    max-width: 400px;
+    margin-top: -22px;
+}
+
+/* Responsive progress bar */
+@media screen and (max-width: 768px) {
+    .progress-bar-wrapper {
+        width: 70%;
+        margin-right: 30px;
+        margin-top: -20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .progress-bar-wrapper {
+        width: 80%;
+        margin-right: 20px;
+        margin-top: -18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .progress-bar-wrapper {
+        width: 90%;
+        margin-right: 10px;
+        margin-top: -16px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .progress-bar-wrapper {
+        width: 95%;
+        margin-right: 5px;
+        margin-top: -14px;
+    }
+}
+
+.pt-slider-value {
+    position: absolute;
+    right: 0;
+    font-family: "Georama";
+    font-size: 12px;
+    color: #65636e;
+}
+
+.update-profile {
+    position: absolute;
+    align-self: flex-start;
+    font-family: "Georama";
+    font-size: 10px;
+    color: #4b3b8b;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pro-pic .panel-heading {
+    display: none !important;
+}
+
+.pro-pic img {
+    display: none !important;
+}
+
+.pro-pic {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* always push to the left */
+    position: absolute;
+    top: 10px;
+    /* adjust as needed */
+    left: 10px;
+    /* adjust as needed */
+}
+
+.pro-pic .main-pro-pic {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50% !important;
+    border: 2px solid #4b3b8b !important;
+    /* font-size: 14px !important; */
+}
+
+/* Responsive profile picture */
+@media screen and (max-width: 768px) {
+    .pro-pic {
+        top: 8px;
+        left: 8px;
+    }
+
+    .pro-pic .main-pro-pic {
+        width: 28px !important;
+        height: 28px !important;
+        border: 1.5px solid #4b3b8b !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .pro-pic {
+        top: 6px;
+        left: 6px;
+    }
+
+    .pro-pic .main-pro-pic {
+        width: 26px !important;
+        height: 26px !important;
+        border: 1.5px solid #4b3b8b !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pro-pic {
+        top: 5px;
+        left: 5px;
+    }
+
+    .pro-pic .main-pro-pic {
+        width: 24px !important;
+        height: 24px !important;
+        border: 1px solid #4b3b8b !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .pro-pic {
+        top: 4px;
+        left: 4px;
+    }
+
+    .pro-pic .main-pro-pic {
+        width: 22px !important;
+        height: 22px !important;
+        border: 1px solid #4b3b8b !important;
+    }
+}
+
+/* Small profile picture for PageTitle */
+.profile-pic-small .main-pro-pic {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    border: 2px solid #4b3b8b !important;
+    font-size: 18px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e6e4ef;
+    font-family: "Georama", sans-serif;
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-pic-small .panel-heading {
+    display: none !important;
+}
+
+.profile-pic-small .panel-body {
+    padding: 0;
+    position: relative;
+}
+
+.profile-pic-small img {
+    display: none !important;
+}
+
+/* Responsive styles for small profile picture */
+@media screen and (max-width: 768px) {
+    .profile-pic-small .main-pro-pic {
+        width: 45px !important;
+        height: 45px !important;
+        font-size: 16px !important;
+        border: 1.5px solid #4b3b8b !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .profile-pic-small .main-pro-pic {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 14px !important;
+        border: 1.5px solid #4b3b8b !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-pic-small .main-pro-pic {
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 12px !important;
+        border: 1px solid #4b3b8b !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .profile-pic-small .main-pro-pic {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 10px !important;
+        border: 1px solid #4b3b8b !important;
+    }
+}
+
+/* Profile content container styles */
+.profile-content-container {
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.progress-bar-mini {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.progress-bar-mini .progress {
+    background-color: #e9ecef;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar-mini .progress-bar {
+    background-color: #4b3b8b;
+    transition: width 0.3s ease;
+}
+
+.progress-bar-mini small {
+    font-size: 10px;
+    color: #6c757d;
+}
+
+/* Full-width layout for PageTitle */
+.profile-content-container-full-width {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-info-full-width {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+}
+
+/* Responsive font sizing for page name */
+.profile-info-full-width .page-name {
+    font-size: 24px !important;
+}
+
+/* Desktop screens - maximum font size */
+@media (min-width: 769px) {
+    .profile-info-full-width .page-name {
+        font-size: 20px !important;
+    }
+}
+
+/* Full-width progress container for PageTitle */
+.progress-container-full-width {
+    width: 100%;
+    padding-right: 20px;
+}
+
+/* Specific styling for 1280x800 screen resolution and similar sizes */
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (min-height: 700px) and (max-height: 900px) {
+    .progress-container-full-width {
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 10px;
+    }
+}
+
+.progress-bar-wrapper-full-width {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+}
+
+.progress-bar-wrapper-full-width .update-profile {
+    font-size: 10px;
+    color: #4b3b8b;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+    top: -4px;
+}
+
+.progress-bar-wrapper-full-width .update-profile:hover {
+    color: #6c5ce7;
+}
+
+/* Inline progress container for PageTitle */
+.progress-container-inline {
+    width: 100%;
+    max-width: 200px;
+}
+
+.progress-bar-wrapper-inline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.progress-bar-wrapper-inline .update-profile {
+    font-size: 10px;
+    color: #4b3b8b;
+    cursor: pointer;
+    text-decoration: underline;
+    align-self: flex-start;
+    transition: color 0.2s ease;
+}
+
+.progress-bar-wrapper-inline .update-profile:hover {
+    color: #6c5ce7;
+}
+
+/* Switch button height matching profile picture */
+.switch-button-container.match-profile-height {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.single-patient-label-override {
+    margin-left: -4px !important;
+}
+
+/* Responsive styles for profile content */
+@media screen and (max-width: 768px) {
+    .profile-content-container {
+        gap: 10px;
+    }
+
+    .profile-info .page-name {
+        font-size: 14px !important;
+    }
+
+    .progress-bar-mini .progress {
+        width: 100px !important;
+    }
+
+    .progress-container-inline {
+        max-width: 150px;
+    }
+
+    .profile-content-container-full-width {
+        gap: 10px;
+    }
+
+    .progress-container-full-width {
+        padding-right: 15px;
+    }
+
+    .profile-info-full-width {
+        align-items: center;
+        text-align: center;
+        gap: 3px;
+    }
+
+    .profile-info-full-width .page-name {
+        font-size: 18px !important;
+    }
+
+    .switch-button-container.match-profile-height {
+        height: 45px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .profile-content-container {
+        gap: 8px;
+    }
+
+    .profile-info .page-name {
+        font-size: 13px !important;
+    }
+
+    .progress-bar-mini .progress {
+        width: 80px !important;
+        height: 5px !important;
+    }
+
+    .progress-container-inline {
+        max-width: 120px;
+    }
+
+    .progress-bar-wrapper-inline .update-profile {
+        font-size: 9px;
+    }
+
+    .profile-content-container-full-width {
+        gap: 8px;
+    }
+
+    .progress-container-full-width {
+        padding-right: 12px;
+    }
+
+    .profile-info-full-width {
+        align-items: center;
+        text-align: center;
+        gap: 3px;
+    }
+
+    .profile-info-full-width .page-name {
+        font-size: 16px !important;
+    }
+
+    .progress-bar-wrapper-full-width .update-profile {
+        font-size: 9px;
+    }
+
+    .switch-button-container.match-profile-height {
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-content-container {
+        gap: 6px;
+    }
+
+    .profile-info .page-name {
+        font-size: 12px !important;
+    }
+
+    .progress-bar-mini .progress {
+        width: 70px !important;
+        height: 4px !important;
+    }
+
+    .progress-container-inline {
+        max-width: 100px;
+    }
+
+    .progress-bar-wrapper-inline .update-profile {
+        font-size: 8px;
+    }
+
+    .profile-content-container-full-width {
+        gap: 6px;
+    }
+
+    .progress-container-full-width {
+        padding-right: 10px;
+    }
+
+    .profile-info-full-width {
+        align-items: center;
+        text-align: center;
+        gap: 3px;
+    }
+
+     .profile-info-full-width .page-name {
+        font-size: 14px !important;
+    }
+
+    .progress-bar-wrapper-full-width .update-profile {
+        font-size: 8px;
+    }
+
+    .switch-button-container.match-profile-height {
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .profile-content-container {
+        gap: 4px;
+    }
+
+    .profile-info .page-name {
+        font-size: 10px !important;
+    }
+
+    .progress-bar-mini .progress {
+        width: 60px !important;
+        height: 4px !important;
+    }
+
+    .progress-container-inline {
+        max-width: 80px;
+    }
+
+    .progress-bar-wrapper-inline .update-profile {
+        font-size: 7px;
+    }
+
+    .profile-content-container-full-width {
+        gap: 4px;
+    }
+
+    .progress-container-full-width {
+        padding-right: 8px;
+    }
+
+    .profile-info-full-width {
+        align-items: center;
+        text-align: center;
+        gap: 3px;
+    }
+
+    .profile-info-full-width .page-name {
+        font-size: 12px !important;
+    }
+
+    .progress-bar-wrapper-full-width .update-profile {
+        font-size: 7px;
+    }
+
+    .switch-button-container.match-profile-height {
+        height: 30px;
+    }
+}
+
+
+/* .pro-pic .main-pro-pic {
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50% !important;
+  border: 2px solid #4b3b8b !important;
+  font-size: 14px !important;
+}
+  @media (max-width: 1024px) {
+  .pro-pic .main-pro-pic {
+    margin-right: 28vw !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .pro-pic .main-pro-pic {
+    margin-right: 10vw !important;
+    margin-bottom: 12px !important;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .pro-pic .main-pro-pic {
+    margin-right: 45vw !important;
+    margin-bottom: 11px !important;
+  }
+} */

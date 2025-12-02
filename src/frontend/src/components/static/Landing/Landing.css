@@ -1,0 +1,22 @@
+.container-top{
+    width: 393px;
+    height: 55px;
+    background: #4B3B8B;
+    margin: 0 auto;
+}
+
+.container-background-1{
+    width: 393px;
+    height: 529px;
+    background: linear-gradient(to bottom, #4B3B8B, #9391EF);
+    margin: 0 auto;
+    border-radius: 0 0 20px 20px;
+}
+
+.container-background-2{
+    width: 393px;
+    height: 450px;
+    background: linear-gradient(to bottom, #4B3B8B, #C5C4F0);
+    margin: 0 auto;
+    border-radius: 0 0 20px 20px;
+}

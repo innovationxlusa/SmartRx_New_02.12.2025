@@ -1,0 +1,21 @@
+.icon-box {
+    margin: 0 auto;
+    transition: 0.2s;
+    border: 3px solid red;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    padding: 15px;    
+    text-align: center;
+    vertical-align: middle;
+}
+
+.red-circle {
+    color: red;
+    font-size: 40px;
+    line-height: 40px;
+}
+.content-txt{
+    color: var(--content-color);
+    font-family: "Georama";
+}

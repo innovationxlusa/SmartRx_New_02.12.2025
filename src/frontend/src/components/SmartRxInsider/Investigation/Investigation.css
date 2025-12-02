@@ -1,0 +1,451 @@
+/* === Wrapper for the entire Investigation section === */
+.investigation-wrapper {
+    font-family: "Georama", sans-serif;
+    color: #333;
+}
+
+.investigation-test-center {
+    font-family: "Georama";
+    color: var(--content-color);
+    font-size: 22px;
+}
+
+.investigation-add-compare-btn {
+    height: 34px;
+    background: #faf8fa;
+    border: 1px solid #ab96d5;
+    border-radius: 3px;
+    font-family: "Georama";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 96.3%;
+    text-transform: capitalize;
+    color: #4b3b8b;
+}
+
+/* === Header container for diagnostic center section === */
+.investigation-diagnostic-header {
+    margin-bottom: 2px;
+    background: #fff;
+    /* padding: 1rem; */
+    border-radius: 4px;
+    border: 1px solid #dedede;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.investigation-tests-header {
+    background: #fff;
+    /* padding: 1rem; */
+    border-radius: 4px;
+    border: 1px solid #dedede;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+/* === Flex wrapper for icon and title inside diagnostic header === */
+.investigation-header-title .investigation-diagnostic-icon {
+    width: 8%;
+    height: 8%;
+    margin-right: 10px;
+}
+
+/* === Section title text style === */
+.investigation-title-text {
+    font-family: "Georama" !important;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #65636e;
+}
+
+/* === Common primary action button === */
+.investigation-action-btn {
+    width: 80%;
+    padding: 0.5rem 1rem;
+    background: #e6e4ef;
+    border: 1px solid #b8aef2;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: "Georama";
+    color: #4b3b8b;
+    cursor: pointer;
+}
+
+/* === Name of the diagnostic center === */
+
+.investigation-card-header {
+    font-family: "Georama";
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(12px, 1.5vw, 18px);
+    /* Responsive font size */
+    line-height: clamp(16px, 2vw, 26px);
+    /* Responsive line height */
+    color: var(--content-color);
+    word-wrap: break-word;
+    text-wrap: balance;
+    /* Optional: for better multi-line text layout */
+    margin-bottom: 0.5rem;
+    /* Optional: spacing below header */
+    width: fit-content;
+}
+
+.investigation-card-header-2 {
+    font-family: "Georama";
+    font-style: normal;
+    font-size: clamp(12px, 1.5vw, 18px);
+    line-height: clamp(16px, 2vw, 26px);
+    color: var(--app-theme-color);
+    width: fit-content;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.change-center {
+    color: #8ca8cf !important;
+}
+
+/* === Icon next to center name — Ibn Sina / Dhaka Medical etc. === */
+.investigation-center-icon {
+    height: 30px;
+}
+
+.investigation-center-icon-2 {
+    height: 30px;
+    vertical-align: top;
+    margin-top: 2px;
+}
+
+/* === Settings gear icon aligned right === */
+.investigation-gear-icon {
+    margin-left: auto;
+    height: clamp(14px, 2vw, 22px);
+    width: clamp(14px, 2vw, 22px);
+    overflow: visible;
+}
+
+/* === Address text inside accordion header === */
+.investigation-center-address {
+    font-size: 0.7rem;
+    color: #65636e;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* === Google rating text and stars === */
+.investigation-rating {
+    /* clamp(13px, 1.5vw, 18px)
+       clamp(16px, 2vw, 26px) */
+    font-size: clamp(12px, 1.5vw, 14.4px);
+    color: var(--app-theme-color);
+    margin: 0.25rem 0;
+    line-height: 1;
+}
+
+.investigation-rating-display {
+    font-size: clamp(12px, 1.5vw, 19.2px);
+}
+
+/* === Summary of how many tests assigned to this center === */
+.investigation-test-summary {
+    font-size: clamp(9px, 0.583vw, 11.2px);
+    font-weight: bold;
+    color: #4b3b8b;
+    margin: 0.25rem 0;
+    line-height: 1.4;
+}
+
+/* === Row for showing icons + info (address, phone, etc.) === */
+.investigation-info-line {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #dedede;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+/* === Highlighted warning info (like close soon message) === */
+.investigation-info-line.warning {
+    background-color: #fff4f4;
+    color: #e55353;
+}
+
+/* === Container holding all tests under a center === */
+.investigation-test-list {
+    margin-top: 1rem;
+}
+
+/* === Each test card layout === */
+.investigation-test-card {
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* === Top row inside a test card with test name and settings === */
+.investigation-test-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    color: #4b3e8f;
+}
+
+/* === Test name styling === */
+.investigation-test-title {
+    font-weight: bold;
+}
+
+/* === Test description below test title === */
+.investigation-test-description {
+    color: #65636e;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 16px;
+}
+
+/* === Optional read more trigger for long descriptions === */
+.investigation-read-more {
+    font-size: 0.75rem;
+    color: #65636e;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* === Pricing row — includes icon and price info === */
+.investigation-price-line {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #dedede;
+    /* margin-bottom: 5px; */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+/* === Pricing icons in the price row === */
+.investigation-price-line img {
+    width: 22px;
+    height: 22px;
+}
+
+/* === Total price at the bottom of test list === */
+.investigation-total-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.05rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #dedede;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    color: #65636e;
+}
+
+/* === Link/button to change center in headers and test cards === */
+.investigation-change-center {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #4b3b8b;
+    cursor: pointer;
+}
+
+/* === Responsive tweaks for mobile === */
+@media (max-width: 576px) {
+
+    /* Stack info rows vertically */
+    .investigation-info-line {
+        gap: 0.3rem;
+    }
+
+    .investigation-info-line.warning {
+        align-items: flex-start;
+    }
+
+    /* Align change link on bottom-right */
+    .investigation-change-center {
+        align-self: flex-end;
+    }
+
+    /* Resize diagnostic icon on mobile */
+    .investigation-diagnostic-icon {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* DIAGNOSTIC COMPARISON CSS START HERE */
+
+.diagnostic-comparison-modal {
+    font-family: "Georama";
+}
+
+.diagnostic-comparison-modal .form-select {
+    background-position: right 0.25rem center;
+}
+
+.diagnostic-comparison-modal .form-select-sm {
+    background-color: #eef2ff;
+    font-size: 12px;
+    color: #4b3b8b;
+    font-weight: 500;
+}
+
+.diagnostic-item-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.diagnostic-logo {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.diagnostic-name {
+    flex: 1;
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.diagnostic-branch {
+    flex-shrink: 0;
+    min-width: 100px;
+    font-size: 0.8rem;
+}
+
+.diagnostic-branch-2 {
+    flex-shrink: 0;
+    min-width: 50px;
+    font-size: 0.8rem;
+}
+
+.diagnostic-comparison-modal .small {
+    color: var(--theme-font-color);
+}
+
+.diagnostic-comparison-modal .input-group .form-control {
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+
+    min-height: 150px;
+    /* Adjust this value as needed */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center the "no data" message if shown */
+    align-items: center;
+}
+
+.diagnostic-comparison-modal .input-group-text {
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-left: none;
+}
+
+.diagnostic-list {
+    max-height: 300px;
+    overflow-y: auto;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.diagnostic-list .border-bottom {
+    border-color: #dee2e6 !important;
+}
+
+.diagnostic-list strong {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+.diagnostic-list .text-muted {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.diagnostic-comparison-modal .btn-sm {
+    font-size: 12px;
+    padding: 4px 10px;
+}
+
+.diagnostic-comparison-modal .rounded {
+    border-radius: 0.375rem;
+}
+
+.diagnostic-comparison-modal .btn-link {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.button-primary {
+    background: var(--app-theme-color) !important;
+    color: #fff !important;
+}
+
+@media (max-width: 576px) {
+
+    .diagnostic-comparison-modal .form-select-sm,
+    .diagnostic-comparison-modal .form-control {
+        font-size: 11px;
+    }
+
+    .diagnostic-comparison-modal .btn-sm {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+
+    .diagnostic-list strong {
+        font-size: 13px;
+    }
+
+    .diagnostic-list .text-muted {
+        font-size: 11px;
+    }
+}
+
+/* DIAGNOSTIC COMPARISON CSS END HERE */
+.width-79 {
+    width: 85% !important;
+}
+
+@media (max-width: 576px) {
+    .width-79 {
+        width: 79% !important;
+    }
+}
+
+.accordion-button-inv {
+    height: 105px !important;
+}
+
+@media (max-width: 368px) {
+    .investigation-total-price {
+        font-size: 0.8rem;
+    }
+}

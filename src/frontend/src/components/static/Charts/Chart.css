@@ -1,0 +1,377 @@
+.chart-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+    padding: 15px;
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.chart-wrapper .recharts-responsive-container {
+    width: 100%;
+    height: 100%;
+}
+
+.donut-container {
+    width: 100%;
+    height: 200px;
+    min-height: 200px;
+}
+
+.pie-container {
+    width: 100%;
+    height: 200px;
+    min-height: 200px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Responsive chart sizing */
+@media screen and (max-width: 576px) {
+    .donut-container {
+        height: 150px;
+        min-height: 150px;
+    }
+    
+    .pie-container {
+        height: 150px;
+        min-height: 150px;
+    }
+    .legend {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .donut-container {
+        height: 180px;
+        min-height: 180px;
+    }
+    
+    .pie-container {
+        height: 180px;
+        min-height: 180px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .donut-container {
+        height: 220px;
+        min-height: 220px;
+    }
+    
+    .pie-container {
+        height: 220px;
+        min-height: 220px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .donut-container {
+        height: 250px;
+        min-height: 250px;
+    }
+    
+    .pie-container {
+        height: 250px;
+        min-height: 250px;
+    }
+}
+
+.totalCount {
+    font-weight: 700;
+    font-size: 18px;
+    font-family: "Georama";
+    color: #333;
+}
+
+.legend-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-family: "Georama";
+    /* margin-bottom: 3px;
+    margin-right: 2px; */
+    margin-left:40px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+    margin-left: 6px;
+    flex-shrink: 0;
+}
+
+/* Mobile responsiveness for screens below 576px */
+@media screen and (max-width: 576px) {
+    .totalCount {
+        font-size: 14px;
+    }
+    
+    .legend-row {
+        font-size: 9px;
+        margin-bottom: 2px;
+    }
+    
+    .circle {
+        width: 8px;
+        height: 8px;
+        margin-right: 4px;
+        margin-left: 4px;
+    }
+    
+    .col-1 {
+        width: 8px;
+        height: 8px;
+        margin-right: 4px;
+    }
+    
+    .data-name, .col-5 {
+        font-size: 9px;
+        min-width: 50px;
+    }
+    
+    .legend {
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-top: -15px;
+        margin-left: 0px;
+    }
+}
+
+/* Ultra-small phones: ≤320px */
+@media screen and (max-width: 320px) {
+    .legend-row {
+        font-size: 7px;
+        margin-bottom: 1px;
+        margin-left: 30px; /* override any custom left margin */
+        gap: 2px;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .circle {
+        width: 5px;
+        height: 5px;
+        margin-right: 2px;
+        margin-left: 2px;
+        flex-shrink: 0;
+    }
+
+    .col-1 {
+        width: 5px;
+        height: 5px;
+        margin-right: 2px;
+        flex-shrink: 0;
+    }
+
+    .data-name, .col-5 {
+        font-size: 7px;
+        min-width: 35px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .legend {
+        padding-left: 2px;
+        padding-right: 2px;
+        margin-top: -16px;
+        width: 100%;
+    }
+
+    .chart-wrapper {
+        padding: 4px;
+        transform: scale(1.0);
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .totalCount {
+        font-size: 12px;
+    }
+}
+
+/* Very small phones: 321px-480px */
+@media screen and (min-width: 321px) and (max-width: 480px) {
+    .legend-row {
+        font-size: 8px;
+        margin-bottom: 1px;       
+        gap: 3px;
+        flex-wrap: nowrap;
+        margin-left: 10px;
+    }
+
+    .circle {
+        width: 6px;
+        height: 6px;
+        flex-shrink: 0;
+    }
+
+    .col-1 {
+        width: 6px;
+        height: 6px;
+        margin-right: 3px;
+        flex-shrink: 0;
+    }
+
+    .data-name, .col-5 {
+        font-size: 8px;
+        min-width: 40px;
+        white-space: nowrap;
+    }
+
+    .legend {
+        padding-left: 3px;
+        padding-right: 3px;
+        margin-top: -14px;
+        margin-left: 10px;
+    }
+
+    .chart-wrapper {
+        padding: 6px;
+        transform: scale(1.05);
+    }
+
+    .totalCount {
+        font-size: 13px;
+    }
+}
+
+/* Responsive text sizing */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .totalCount {
+        font-size: 16px;
+    }
+    
+    .legend-row {
+        font-size: 10px;
+    }
+    
+    .legend {
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-left: 10px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .totalCount {
+        font-size: 18px;
+    }
+    
+    .legend-row {
+        font-size: 12px;
+    }
+    .legend{
+        padding-left: 10px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .totalCount {
+        font-size: 20px;
+    }
+    
+    .legend-row {
+        font-size: 13px;
+    }
+}
+
+.col-1 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+    margin-left: 0;
+    flex-shrink: 0;
+}
+
+.data-name {
+    min-width: 70px;
+    text-align: left;
+    color: #333;
+    font-family: "Georama";
+    font-weight: 600;
+    font-size: 11px;
+}
+
+.col-5 {
+    min-width: 70px;
+    text-align: left;
+    color: #65636e;
+    font-family: "Georama";
+    font-weight: 500;
+    font-size: 11px;
+    margin-right: "2px" !important;
+    margin-left: "-10px" !important;
+}
+
+.value-color {
+    color: #65636e;
+}
+
+.data-value {
+    font-weight: 300;
+    font-family: "Georama";
+    color: var(--content-color);
+    margin-left: 3px;
+    font-size: 13px;
+}
+
+.col-2 {
+    font-weight: 300;
+    font-family: "Georama";
+    color: var(--content-color);
+    font-size: 13px;
+}
+
+.recharts-responsive-container {
+    width: 100% !important;
+    aspect-ratio: 1 / 1;
+}
+
+.legend {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -10px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Responsive legend spacing */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .legend {
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-top: -12px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .legend {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: -10px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .legend {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: -10px;
+        margin-left: 10px;
+    }
+}

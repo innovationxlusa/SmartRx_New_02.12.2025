@@ -1,0 +1,58 @@
+/* Existing (renamed) hover style */
+.custom-button-theme-hover:hover,
+.custom-button-theme-hover:active {
+    background: var(--app-theme-color) !important;
+    color: #fff !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+.custom-button-theme-hover:hover .button-label,
+.custom-button-theme-hover:hover .icon-style,
+.custom-button-theme-hover:active .button-label,
+.custom-button-theme-hover:active .icon-style {
+    color: #fff !important;
+    /* background: var(--app-theme-color) !important; */
+}
+
+/* New light hover effect */
+.custom-button-light-hover:hover,
+.custom-button-light-hover:active {
+    background: white !important;
+    color: var(--theme-font-color) !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+.custom-button-light-hover:hover .button-label,
+.custom-button-light-hover:hover .icon-style,
+.custom-button-light-hover:active .button-label,
+.custom-button-light-hover:active .icon-style {
+    color: inherit !important;
+}
+
+/* Desktop hover */
+@media (hover: hover) and (pointer: fine) {
+    /* Existing (renamed) hover style */
+    .custom-button-theme-hover:hover {
+        background: var(--app-theme-color) !important;
+        color: #fff !important;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .custom-button-theme-hover:hover .button-label,
+    .custom-button-theme-hover:hover .icon-style {
+        color: #fff !important;
+        /* background: var(--app-theme-color) !important; */
+    }
+
+    /* New light hover effect */
+    .custom-button-light-hover:hover {
+        background: white !important;
+        color: var(--theme-font-color) !important;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .custom-button-light-hover:hover .button-label,
+    .custom-button-light-hover:hover .icon-style {
+        color: inherit !important;
+    }
+}

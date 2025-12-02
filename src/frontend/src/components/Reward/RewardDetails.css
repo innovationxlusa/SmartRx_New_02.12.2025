@@ -1,0 +1,264 @@
+/* Reward Details Page Styles */
+.reward-details-container {
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.reward-details-content {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Total Points Section */
+.total-points-section {
+    border-bottom: 1px solid #65636e;
+}
+
+.total-points-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-points-label {
+    font-family: 'Georama';
+    font-size: 16px;
+    font-weight: 600;
+    color: #4b3b8b;
+}
+
+.total-points-value {
+    background-color: #EEF2FF;
+    border: 1px solid #4b3b8b;
+    border-radius: 2px;
+    font-family: 'Georama';
+    font-size: 14px;
+    font-weight: 700;
+    color: #4b3b8b;
+    margin-right: 10%;
+    padding: 2px 10px;
+    width: 50px;
+}
+
+.point-select-date{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Filter Tabs Section */
+.filter-tabs-section {
+    margin: 20px 0;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 12px;
+}
+
+.filter-tab {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #cfced4;
+    color: #cfced4;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-family: 'Georama', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-tab:hover {
+    background-color: #ffffff;
+}
+
+.filter-tab.active {
+    background-color: #ffffff;
+    color: #4b3b8b;
+    border: 2px solid #4b3b8b;
+    border-radius: 8px;
+}
+
+/* Date Range Section */
+.date-range-section {
+    margin: 20px 0;
+}
+
+.date-range-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.date-input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.calendar-icon {
+    font-size: 16px;
+    color: #4b3b8b;
+}
+
+.date-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-family: 'Georama', sans-serif;
+    font-size: 14px;
+    color: #65636e;
+    background: transparent;
+}
+
+.date-input::placeholder {
+    color: #9b98a3;
+}
+
+.search-icon {
+    font-size: 16px;
+    color: #4b3b8b;
+    padding: 0 8px;
+}
+
+/* Transaction List Section */
+.transaction-list-section {
+    margin: 20px 0 100px 0; /* Extra bottom margin for navigation */
+}
+
+.loading-container,
+.error-container,
+.empty-container {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Georama';
+    color: #65636e;
+}
+
+.error-container {
+    color: #dc3545;
+}
+
+.transaction-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+.transaction-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.transaction-action {
+    font-family: 'Georama';
+    font-size: 12px;
+    font-weight: 400;
+    color: #65636e;
+}
+
+.transaction-date {
+    font-family: 'Georama';
+    font-size: 12px;
+    color: #65636e;
+}
+
+.transaction-points {
+    background-color: #e6e4ef;
+    border-radius: 4px;
+    font-family: 'Georama';
+    font-size: 10px;
+    font-weight: 600;
+    color: #4b3b8b;
+    height: 28px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .reward-details-content {
+        padding: 0 12px;
+    }
+    
+    .filter-tabs {
+        gap: 8px;
+    }
+    
+    .filter-tab {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+    
+    .date-range-container {
+        padding: 10px 12px;
+        gap: 8px;
+    }
+    
+    .transaction-item {
+        padding: 12px 0;
+    }
+    
+    .transaction-action {
+        font-size: 12px;
+    }
+    
+    .transaction-date {
+        font-size: 12px;
+    }
+    
+    .transaction-points {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .total-points-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .total-points-label {
+        font-size: 10px;
+    }
+    
+    .total-points-value {
+        font-size: 10px;
+        padding: 2px 12px;
+    }
+    
+    .filter-tabs {
+        flex-direction: row;
+        gap: 8px;
+    }
+    
+    .date-range-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .date-input-group {
+        width: 100%;
+    }
+}

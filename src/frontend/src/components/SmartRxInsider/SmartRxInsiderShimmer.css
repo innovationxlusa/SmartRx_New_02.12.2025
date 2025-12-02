@@ -1,0 +1,113 @@
+.smart-rx-shimmer {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.smart-rx-shimmer-tabs {
+    display: flex;
+    gap: 10px;
+}
+
+.smart-rx-shimmer-tab {
+    height: 40px;
+    min-width: clamp(100px, 10vw, 150px);
+    border-radius: 30px;
+    background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+    background-size: 200% 100%;
+    animation: smartShimmer 1.7s infinite linear;
+}
+
+.smart-rx-shimmer-patient-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.smart-rx-shimmer-line {
+    height: 12px;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+    background-size: 200% 100%;
+    animation: smartShimmer 1.7s infinite linear;
+}
+
+.smart-rx-shimmer-line.smart-rx-short {
+    width: clamp(50px, 40vw, 200px);
+}
+
+.smart-rx-shimmer-line.smart-rx-long {
+    width: 100%;
+    height: 14px;
+}
+
+.smart-rx-shimmer-card-big {
+    border-radius: 12px;
+    background: linear-gradient(90deg, #fdfdfd 25%, #f2f0f0 50%, #fdfdfd 75%);
+    background-size: 200% 100%;
+    animation: smartShimmer 1.7s infinite linear;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.smart-rx-shimmer-card {
+    border-radius: 12px;
+    background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+    background-size: 200% 100%;
+    animation: smartShimmer 1.7s infinite linear;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.smart-rx-shimmer-card.smart-rx-large {
+    height: 80px;
+    width: 100%;
+}
+
+.smart-rx-shimmer-card-big.smart-rx-medium {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.smart-rx-shimmer-title {
+    width: 150px;
+    height: 24px;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+    background-size: 200% 100%;
+    animation: smartShimmer 1.7s infinite linear;
+}
+
+.smart-rx-shimmer-progress-line {
+    display: flex;
+    gap: 14px;
+    margin: 10px 0;
+}
+
+.smart-rx-shimmer-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+    background-size: 200% 100%;
+    animation: smartShimmer 1.7s infinite linear;
+}
+
+.smart-rx-shimmer-add-button {
+    width: 100px;
+    height: 36px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+    background-size: 200% 100%;
+    animation: smartShimmer 1.7s infinite linear;
+}
+
+@keyframes smartShimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}

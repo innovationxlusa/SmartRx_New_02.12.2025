@@ -1,0 +1,66 @@
+.custom-card {
+    background: #ffffff;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    /* border-radius: 8px; */
+    font-family: "Georama";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #65636e;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+}
+
+.custom-card-wrapper {
+    padding: 6px 12px;
+}
+
+.custom-card-header {
+    font-family: "Georama";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 29px;
+    color: var(--theme-font-color, #4b3b8b);
+}
+
+.custom-card-title {
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #000000;
+}
+
+.custom-card-title-2 {
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #000000;
+}
+
+.custom-card-title-2 span:first-child {
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #000000;
+}
+
+.custom-card-title-2 span:last-child {
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #000000;
+}

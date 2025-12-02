@@ -1,0 +1,88 @@
+/* Wrapper */
+.custom-check-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-family: "Georama";
+}
+
+/* Label Styling */
+.custom-check-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+    user-select: none;
+    position: relative;
+    color: #65636e;
+}
+
+/* Hide native checkbox */
+.custom-checkbox {
+    display: none;
+}
+
+/* Custom Checkbox Box */
+.custom-checkbox-box {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+/* Checkmark */
+.custom-checkbox-box::after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 45%;
+    left: 50%;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Checked State Styling */
+.custom-checkbox:checked + .custom-checkbox-box {
+    background-color: var(--app-theme-color, #3e3c9b); /* Your primary color */
+    border-color: var(--app-theme-color, #3e3c9b);
+}
+
+.custom-checkbox:checked + .custom-checkbox-box::after {
+    display: block;
+}
+
+/* Text */
+.custom-check-text {
+    color: #65636e;
+    font-size: 14px;
+}
+
+/* Link */
+.custom-check-link {
+    color: var(--app-theme-color, #3e3c9b);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* Error */
+.has-error .custom-check-error {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.custom-check-link {
+    color: var(--app-theme-color) !important;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.custom-check-link:hover {
+    text-decoration: underline;
+}

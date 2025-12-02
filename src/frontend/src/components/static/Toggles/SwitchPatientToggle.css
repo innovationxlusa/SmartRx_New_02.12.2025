@@ -1,0 +1,161 @@
+.switch-patient-toggle-wrapper {
+    position: relative;
+    margin-bottom: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.switch-patient-toggle-input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    outline: none;
+}
+
+.switch-patient-toggle-input:checked+label {
+    background-color: #ffffff;
+}
+
+.switch-patient-toggle-input:checked+label .switch-patient-toggle-square {
+    left: calc(100% - clamp(40px, 9.5vw, 46px));
+}
+
+.switch-patient-toggle-input:checked+label .switch-patient-toggle-square .pin-icon {
+    transform: rotate(0);
+}
+
+.switch-patient-toggle-input:checked+label .switch-patient-toggle-square .pin-top {
+    animation: pushPinTop 0.4s ease-in-out 0.55s;
+}
+
+.switch-patient-toggle-input:checked+label .switch-patient-toggle-square .pin-middle,
+.switch-patient-toggle-input:checked+label .switch-patient-toggle-square .switch-patient-pin-bottom:before {
+    animation: pushPin 0.4s ease-in-out 0.55s;
+}
+
+.switch-patient-label-container {
+    width: clamp(35px, 8vw, 39px);
+    height: clamp(20px, 5vw, 24px);
+}
+
+.switch-patient-label-left,
+.switch-patient-label-right {
+    min-width: clamp(35px, 8vw, 39px);
+    height: clamp(20px, 5vw, 24px);
+    color: #4b3b8b !important; 
+    font-style: normal;
+    font-weight: 800;
+    font-size: clamp(11px, 2.5vw, 14px);
+    line-height: clamp(14px, 3vw, 16px);
+    text-align: center;
+    letter-spacing: -0.006em;
+    margin-top: clamp(4px, 1.2vw, 6px);
+    margin-left: clamp(4px, 1.2vw, 6px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* When checked, hide .label-left */
+.switch-patient-toggle-input:checked~.switch-patient-toggle-container .switch-patient-label-right {
+    display: none;
+}
+
+/* When NOT checked, hide .label-right */
+.switch-patient-toggle-input:not(:checked)~.switch-patient-toggle-container .switch-patient-label-left {
+    display: none;
+}
+
+.switch-patient-toggle-input:checked~.switch-patient-toggle-container .switch-patient-label-left {
+    margin: clamp(4px, 1vw, 5px) 0 0 clamp(35px, 8vw, 40px);
+}
+
+.switch-patient-toggle-input:not(:checked)~.switch-patient-toggle-container .switch-patient-label-right {
+    margin: clamp(4px, 1vw, 5px) 0 0 clamp(4px, 1vw, 6px);
+}
+
+.switch-patient-toggle-container {
+    border-radius: clamp(25px, 6vw, 30px);
+    display: block;
+    width: clamp(95px, 20vw, 106px);
+    height: clamp(40px, 9vw, 45px);
+    background: #f0eff3 !important;
+    border: 1.5px solid rgba(128, 128, 128, 0.55);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.35, 0.4, 0.45, 0.2);
+}
+
+.switch-patient-toggle-square {
+    position: absolute;
+    top: 50%;
+    left: -1px;
+    transform: translateY(-50%);
+    background: #a488d0 !important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: clamp(38px, 9vw, 44px);
+    height: clamp(38px, 9vw, 44px);
+    border-radius: 10px;
+    border: 1.5px solid #847e9f;
+    transition: all 0.3s cubic-bezier(0.33, 0.44, 0.45, 1.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.switch-patient-toggle-icon img {
+    width: clamp(20px, 5vw, 25px);
+    height: clamp(20px, 5vw, 25px);
+    object-fit: contain;
+    margin-bottom: 2px;
+}
+
+.user-specific-info-item {
+    margin-top: clamp(3px, 1vw, 4px);
+    font-family: "Georama";
+    font-size: clamp(8px, 1.8vw, 9px);
+    font-weight: 550;
+    color: var(--app-theme-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: block;
+}
+
+@keyframes pushPin {
+    60% {
+        top: -2px;
+    }
+
+    85% {
+        top: -2px;
+    }
+
+    100% {
+        top: -3px;
+    }
+}
+
+@keyframes pushPinTop {
+    60% {
+        top: -5px;
+    }
+
+    85% {
+        top: -5px;
+    }
+
+    100% {
+        top: -4px;
+    }
+}
+
+
+
+@media screen and (max-width: 576px) {
+    .switch-patient-toggle-input:not(:checked)~.switch-patient-toggle-container .switch-patient-label-right {
+        margin: clamp(3px, 0.8vw, 4px) 0 0 clamp(3px, 0.8vw, 5px);
+    }
+}

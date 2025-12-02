@@ -1,0 +1,68 @@
+.graph-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+}
+
+.graph-background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 66px;
+    background: linear-gradient(to right, #4B3B8B, #CDC2FB);
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.circle-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 133px;
+    height: 133px;
+    background: black;
+    border-radius: 50%;
+    z-index: 9;
+    margin: 0 auto;
+}
+
+.heart-container{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+  
+.heart-icon{
+    width: 46px;
+    height: 41px;
+    background: #E6E4EF;
+    position: relative;
+    transform: rotate(-45deg);
+}
+
+.heart-icon::before,
+.heart-icon::after {
+    content: '';
+    width: 46px;
+    height: 41px;
+    background: #E6E4EF;
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .heart-icon::before {
+    top: -24px;
+    left: 0;
+  }
+  
+  .heart-icon::after {
+    top: 0;
+    left: 24px;
+  }

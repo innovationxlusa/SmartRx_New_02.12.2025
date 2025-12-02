@@ -1,0 +1,36 @@
+.see-more-modal-container {
+    display: flex;
+    flex-direction: column;
+    font-family: "Georama";
+}
+
+.see-more-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.see-more-item:hover {
+    background-color: var(--theme-hover-color);
+}
+
+.see-more-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.see-more-label {
+    font-size: 16px;
+    color: #333;
+    margin-left: 10px;
+}
+
+.see-more-item:hover .see-more-label {
+    color: var(--theme-font-color); /* Text turns purple on hover */
+}

@@ -1,0 +1,91 @@
+table,
+td,
+.common-table .table-row,
+.rx-folder-container,
+.file-list-container {
+    transition: all 0.3s ease;
+}
+
+.common-table .table-row .expanded,
+.expanded {
+    background-color: #b2b2b2;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.button-group-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.button-group-wrapper.show {
+    max-height: 100px;
+    padding: 0.75rem 0rem;
+}
+
+.folder-icon {
+    width: 52px;
+    height: 50px;
+    margin-right: 16px;
+}
+
+.image-icon {
+    width: 51px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.image-name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.006em;
+    color: #475569;
+}
+
+.table-row {
+    height: 72px;
+    min-height: 72px;
+    border-bottom: 1px solid rgba(69, 108, 139, 0.5) !important;
+}
+.folder-create-date {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 160%;
+    color: #65636e;
+}
+.file-create-date {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: #65636e;
+}
+
+.folder-weight {
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 16px;
+    line-height: 160%;
+    color: #ffff;
+    background-color: var(--content-color);
+}
+.file-weight {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 160%;
+    color: #65636e;
+}
+
+.row-content {
+    padding: 12px;
+    border-radius: 10px;
+}

@@ -1,0 +1,283 @@
+.learn-more-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.learn-more-divider-line {
+    width: 291.56px;
+    height: 4px;
+    max-width: 100%;
+}
+
+.learn-more-button-group {
+    display: flex;
+    flex-direction: row !important; /* Always horizontal - force override */
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: nowrap !important; /* Prevent wrapping - force buttons to stay side by side */
+    width: 100%;
+    min-width: 0; /* Allow shrinking on very small screens */
+}
+
+.learn-more-custom-button {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 700;
+    background-color: transparent;
+    border: 1px solid var(--app-theme-color);
+    color: var(--app-theme-color);
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    min-width: 120px;
+    justify-content: center;
+    flex-shrink: 0; /* Prevent buttons from shrinking too much */
+    white-space: nowrap; /* Prevent text from wrapping inside buttons */
+}
+
+.learn-more-custom-button:hover {
+    background: var(--app-theme-color);
+    color: var(--text-white);
+    transform: translateY(-1px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+}
+
+.learn-more-custom-button:hover svg {
+    fill: var(--text-white);
+    border: 2px solid var(--text-white);
+}
+
+.learn-more-custom-button:active {
+    transform: translateY(0px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Touch device improvements */
+@media (hover: none) and (pointer: coarse) {
+    .learn-more-custom-button {
+        min-height: 44px; /* Minimum touch target size */
+        padding: 12px 16px;
+    }
+    
+    .learn-more-custom-button:active {
+        background: var(--app-theme-color);
+        color: var(--text-white);
+    }
+    
+    .learn-more-custom-button:active svg {
+        fill: var(--text-white);
+        border: 2px solid var(--text-white);
+    }
+}
+
+.learn-more-icon-wrapper svg {
+    fill: var(--app-theme-color);
+    border-top: 1px solid var(--app-theme-color);
+    border-right: 1px solid var(--app-theme-color);
+    border-bottom: 1px solid var(--app-theme-color);
+    border-left: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+}
+
+.learn-more-learn-more-button {
+    padding: 8px 15px;
+}
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+    .learn-more-divider-line {
+        width: 320px;
+    }
+    
+    .learn-more-custom-button {
+        width: 170px;
+        height: 40px;
+        font-size: 12px;
+    }
+    
+    .learn-more-icon-wrapper svg {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+/* Medium screens (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .learn-more-divider-line {
+        width: 291.56px;
+    }
+    
+    .learn-more-custom-button {
+        width: 155px;
+        height: 35px;
+        font-size: 11px;
+    }
+    
+    .learn-more-icon-wrapper svg {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Small screens (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .learn-more-divider-line {
+        width: 280px;
+    }
+    
+    .learn-more-custom-button {
+        width: 145px;
+        height: 35px;
+        font-size: 11px;
+    }
+    
+    .learn-more-icon-wrapper svg {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* Extra small screens (576px to 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .learn-more-divider-line {
+        width: 250px;
+        height: 3px;
+    }
+    
+    .learn-more-custom-button {
+        width: 135px;
+        height: 32px;
+        font-size: 10px;
+    }
+    
+    .learn-more-icon-wrapper svg {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .learn-more-button-group {
+        gap: 8px;
+    }
+}
+
+/* Very small screens (below 576px) */
+@media (max-width: 575.98px) {
+    .learn-more-divider-line {
+        width: 200px;
+        height: 3px;
+    }
+    
+    .learn-more-button-group {
+        flex-direction: row !important; /* Keep horizontal layout - force override */
+        gap: 6px; /* Reduce gap for smaller screens */
+        flex-wrap: nowrap !important; /* Prevent wrapping - force side by side */
+        justify-content: center;
+    }
+    
+    .learn-more-custom-button {
+        width: 140px; /* Smaller width for small screens */
+        height: 32px;
+        font-size: 10px;
+        min-width: 120px; /* Ensure minimum width */
+    }
+    
+    .learn-more-icon-wrapper svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* Extra small screens (below 400px) */
+@media (max-width: 399.98px) {
+    .learn-more-divider-line {
+        width: 160px;
+        height: 2px;
+    }
+    
+    .learn-more-button-group {
+        flex-direction: row !important; /* Keep horizontal layout - force override */
+        gap: 4px; /* Further reduce gap for very small screens */
+        flex-wrap: nowrap !important; /* Prevent wrapping - force side by side */
+        justify-content: center;
+    }
+    
+    .learn-more-custom-button {
+        width: 125px; /* Smaller width for very small screens */
+        height: 30px;
+        /* font-size: 9px; */
+        min-width: 110px;
+    }
+    
+    .learn-more-icon-wrapper svg {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+/* Ultra small screens (below 320px) */
+@media (max-width: 319.98px) {
+    .learn-more-divider-line {
+        width: 140px;
+        height: 2px;
+    }
+    
+    .learn-more-button-group {
+        flex-direction: row !important; /* Keep horizontal layout - force override */
+        gap: 3px; /* Minimal gap for ultra small screens */
+        flex-wrap: nowrap !important; /* Prevent wrapping - force side by side */
+        justify-content: center;
+    }
+    
+    .learn-more-custom-button {
+        width: 115px; /* Compact width for ultra small screens */
+        height: 28px;
+        font-size: 8px;
+        min-width: 100px;
+        padding: 6px 8px; /* Reduce padding for ultra small screens */
+    }
+    
+    .learn-more-icon-wrapper svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Extreme small screens (below 280px) - emergency fallback */
+@media (max-width: 279.98px) {
+    .learn-more-divider-line {
+        width: 120px;
+        height: 2px;
+    }
+    
+    .learn-more-button-group {
+        flex-direction: row !important; /* ✅ Force horizontal */
+        flex-wrap: nowrap !important; /* ✅ Prevent wrapping */
+        gap: 2px;
+        justify-content: center;
+    }
+    
+    .learn-more-custom-button {
+        width: 100px; /* Very compact width */
+        height: 26px;
+        font-size: 7px;
+        min-width: 90px;
+        padding: 4px 6px;
+    }
+    
+    .learn-more-icon-wrapper svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Make text even smaller on ultra compact screens */
+    .learn-more-custom-button span {
+        font-size: 7px;
+    }
+}

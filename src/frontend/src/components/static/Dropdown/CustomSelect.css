@@ -1,0 +1,129 @@
+.select-flex-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.custom-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.custom-select-container {
+    position: relative;
+    width: var(--custom-width, 100%);
+    background: var(--custom-bg, #f9f9f9);
+    border-radius: var(--custom-radius, 8px);
+    border: var(--custom-border, 1px solid #65636e);
+    color: var(--custom-text, #333);
+}
+
+.custom-select-display {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 36px;
+    cursor: pointer;
+    padding: 8px 16px;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.custom-select-display.focused {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.custom-select-display.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.select-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.select-icon.left {
+    left: 12px;
+}
+
+.select-icon.right {
+    right: 12px;
+    transition: transform 0.25s ease-in-out;
+}
+
+.select-icon.right svg {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* ensures smooth rotation for the SVG itself */
+}
+
+.rotate-180 {
+    transform: rotate(-180deg);
+}
+
+.selected-value {
+    flex: 1;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.custom-select-options {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-select-options.over-modal {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.custom-select-option {
+    padding: 8px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.custom-select-option:hover {
+    background-color: #ffffff;
+}
+
+.custom-select-option.selected {
+    background-color: rgba(13, 110, 253, 0.2);
+}
+
+.custom-select-option:last-child {
+    border-bottom: none;
+}
+
+.custom-select-label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 4px;
+}
+
+
+.custom-select-label.top-left {
+    text-align: left;
+}
+
+.custom-select-label.top-center {
+    text-align: center;
+}
+
+.custom-select-label.top-right {
+    text-align: right;
+}

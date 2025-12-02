@@ -1,0 +1,65 @@
+.dropdown-menu {
+    max-width: 250px;
+    max-height: 300px;
+    overflow-y: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 8px;
+    position: fixed;
+    /* Important to ensure it's outside Bootstrap's grid */
+}
+
+.context-button:hover {
+    background: lightgray !important;
+}
+
+.dropdown-item:hover {
+    background-color: var(--theme-hover-color);
+    color: var(--theme-font-color);
+    border-radius: 8px;
+}
+
+.fade-in {
+    opacity: 0;
+    /* transform: translateY(-10px); */
+    animation: fadeIn 0.2s forwards ease-in-out;
+}
+
+.fade-out {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeOut 0.2s forwards ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+/* Ensure the menu stays within the screen */
+@media (max-width: 500px) {
+    .dropdown-menu {
+        max-width: 200px;
+        font-size: 14px;
+    }
+}

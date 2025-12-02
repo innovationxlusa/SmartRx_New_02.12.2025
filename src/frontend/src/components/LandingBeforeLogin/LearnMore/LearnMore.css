@@ -1,0 +1,97 @@
+/* .FileRxRightStyle h4 {
+    color: #fff;
+}
+.FileRxRightStyle p {
+    text-align: left;
+    color: #fff;
+}
+.FileRxRightStyle {
+    text-align: left;
+}
+
+.FileRxLeftStyle {
+    text-align: right;
+}
+@media (max-width: 767.98px) {
+    .FileRxLeftStyle {
+        text-align: left;
+    }
+}
+.FileRxMainStyle {
+    padding-top: 20px;
+}
+.topLearnMoreSection {
+    padding: 30px;
+    background: linear-gradient(180deg, #4b3b8b 0%, #c5c4f0 100%);
+    border-radius: 0px 0px 20px 20px;
+    height: 620px;
+    width: 100%;
+}
+
+.topLearnMoreSection h3 {
+    color: #ffffff;
+}
+.midleVideoSection {
+    padding-top: 20px;
+}
+.PrescripTitle {
+    padding-top: 20px;
+}
+.midleTextStyle p {
+    font-family: "Georama";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: justify;
+    color: #4a4646;
+}
+
+.midleTextStyle {
+    padding-top: 60px;
+}
+
+@media (max-width: 767.98px) {
+    .midleTextStyle {
+        padding-top: 50px;
+    }
+}
+@media (max-width: 767.98px) {
+    .topLearnMoreSection {
+        padding: 30px;
+        background: linear-gradient(180deg, #4b3b8b 0%, #c5c4f0 100%);
+        border-radius: 0px 0px 20px 20px;
+        height: 470px;
+        width: 100%;
+    }
+}
+
+.topSectionPadding {
+    padding-top: 40px;
+}
+
+.stickyHeader {
+    padding: 10px 0;
+}
+.stickyHeader tr td h3 {
+    color: #ffffff;
+    font-family: Georama;
+}
+.stickyFooter {
+    position: fixed;
+    padding: 10px 0;
+    bottom: 0;
+    background-color: #fff;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.learnLeftTd {
+    text-align: right;
+}
+.learnRightTd {
+    text-align: left;
+}
+.rightSmartRx {
+    text-align: left;
+    padding-top: 10px;
+} */

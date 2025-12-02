@@ -1,0 +1,228 @@
+/* ADVICE SECTION START HERE */
+
+.advice-doctor-section {
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.advice-section-title {
+    font-family: "Georama";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: justify;
+    color: #4b3b8b;
+    /* display: flex;
+    align-items: center;
+    gap: 20px; */
+}
+
+.advice-recommendation-list {
+    list-style: none;
+    padding-left: 0;
+    /* color: #5f5f5f; */
+}
+
+.advice-recommendation-list li {
+    font-family: "Georama";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: justify;
+    color: #4b3b8b;
+    margin-bottom: 0.3rem;
+}
+
+.advice-recommendation-list li em {
+    font-family: "Georama";
+    font-style: italic;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: justify;
+    color: #4b3b8b;
+    margin-bottom: 0.3rem;
+    margin-left: 5px;
+}
+
+.therapy-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    /* border: 1px solid var(--Overlay-Color, #E6E4EF); */
+background: rgba(255, 255, 255, 0.00);
+/* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
+}
+
+.advice-card {
+    display: flex;
+    align-items: center;
+    /* background: #f8f8ff; */
+    justify-content: space-between;
+    /* border-radius: 10px; */
+    padding: 1rem;
+    border: 1px solid var(--overlay-color);
+    background-color: #FFFFFF00;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+}
+.shadow-custom {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shadow-custom:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.health-icon {
+  max-width: 100px;
+}
+.advice-card-img {
+    width: 48px;
+    height: 48px;
+    margin-right: 1rem;
+}
+
+.advice-card-content h6 {
+    margin: 0;
+    font-weight: 500;
+    color: #4b3e8f;
+    font-size: 18px;
+}
+
+.advice-diagnostic-section,
+.advice-test-section {
+    margin-top: 1.5rem;
+}
+
+.advice-center-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #dedede;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.advice-center-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.advice-center-header .logo {
+    width: 30px;
+    height: 30px;
+}
+
+.advice-center-header .advice-center-name {
+    font-weight: bold;
+}
+
+.advice-center-header .advice-gear {
+    margin-left: auto;
+}
+
+.advice-change-link {
+    color: #5f5fef;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.advice-add-btn {
+    height: 34px;
+    background: #faf8fa;
+    border: 1px solid #ab96d5;
+    border-radius: 3px;
+    font-family: "Georama";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 96.3%;
+    text-transform: capitalize;
+    color: #4b3b8b;
+}
+
+.advice-learn-btn {
+    background: #faf8fa;
+    border: 1px solid #ab96d5;
+    border-radius: 3px;
+    color: #4b3e8f;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    font-family: "Georama";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 96.3%;
+}
+
+.advice-center-desc,
+.advice-tests-count,
+.advice-info-row,
+.advice-test-desc {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0.4rem 0;
+}
+
+.advice-info-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.3rem;
+}
+
+.advice-info-row.advice-warning {
+    color: red;
+}
+
+.advice-test-card {
+    margin-top: 1rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 1rem;
+    background: #fafafa;
+}
+
+.advice-test-header {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #4b3e8f;
+    font-weight: 500;
+}
+
+.advice-price-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.6rem;
+    font-size: 0.95rem;
+}
+
+.advice-price-row img {
+    width: 22px;
+    height: 22px;
+}
+
+.advice-total-price {
+    font-size: 1.05rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* ADVICE SECTION END HERE */

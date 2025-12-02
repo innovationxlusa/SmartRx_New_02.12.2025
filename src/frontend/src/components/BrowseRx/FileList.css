@@ -1,0 +1,28 @@
+.styled-box {
+    border: 1px solid #65636e;
+    border-radius: 12px;
+    background-color: #eef2ff;
+    padding: 16px;
+}
+
+.folder {
+    background-image: url("../../assets/img/FolderIcon.svg");
+    /* background: url("../../../assets/img/CloseIcon.svg") no-repeat center center; */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-size: 60%;
+}
+.folder-text {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--content-color);
+}
+
+.truncate-filename {
+    max-width: 200px; /* adjust as needed */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: middle;
+}

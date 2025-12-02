@@ -1,0 +1,204 @@
+/* React Toast custom css start here */
+
+/* toastStyles.css */
+
+.Toastify__toast-container {
+    /* Optionally, set a maximum width */
+    max-width: 100vw !important;
+    /* Set the width to auto to adjust dynamically based on content */
+    width: auto !important;
+}
+
+.Toastify__toast {
+    white-space: nowrap !important;
+    /* Prevent text wrapping */
+    overflow: hidden !important;
+    /* Hide overflow */
+    text-overflow: ellipsis !important;
+    /* Add ellipsis for overflow text */
+
+    display: inline-flex !important;
+    max-width: none !important;
+    width: auto !important;
+    min-width: auto !important;
+    /* white-space: normal !important; */
+    word-break: break-word;
+    padding: 10px 36px 10px 16px;
+    min-height: clamp(30px, 10vh, 50px) !important;
+    max-height: clamp(30px, 10vh, 50px) !important;
+}
+
+.Toastify__toast-body {
+    /* Set text color to white */
+    color: #fff !important;
+    /* padding-right: 12px; */
+}
+
+.Toastify__toast-icon svg {
+    fill: #fff !important;
+    /* Set success icon color to white */
+    height: clamp(12px, 2vh, 22px) !important;
+}
+
+.Toastify__toast-icon--error svg {
+    fill: #fff !important;
+    /* Set error icon color to white */
+}
+
+.Toastify__close-button {
+    color: #fff !important;
+    /* Set cancel icon color to white */
+    margin-top: clamp(9px, 2vh, 5px);
+    /* Adjust margin to align cancel icon with text */
+    padding-right: 10px;
+}
+
+.Toastify__close-button svg {
+    fill: #fff !important;
+}
+
+.Toastify__close-button:hover {
+    color: red !important;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(10deg);
+    }
+    40% {
+        transform: rotate(-10deg);
+    }
+    60% {
+        transform: rotate(10deg);
+    }
+    80% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* New pop/bounce animation for celebration */
+@keyframes popBounce {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.4);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    70% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animated-icon {
+    display: inline-block;
+    animation: popBounce 1s ease-in-out infinite;
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+.toast-success {
+    display: flex;
+    align-items: center;
+    background-color: #4caf50 !important;
+    /* Green background */
+    color: #fff !important;
+    /* White text */
+}
+
+.toast-success .waving-hand {
+    display: inline-block;
+    /* Adjust animation duration as needed */
+    animation: wave 1.5s infinite;
+    margin-right: 8px; /* Adjust as needed for spacing */
+}
+
+.toast-error {
+    background-color: #f44336 !important;
+    /* Red background */
+    color: #fff !important;
+    /* White text */
+
+    font-size: clamp(12px, 3vw, 16px);
+}
+
+.toast-info {
+    background-color: #2196f3 !important;
+    /* Blue background */
+    color: #fff !important;
+    /* White text */
+}
+
+.toast-warning {
+    background-color: #ff9800 !important;
+    /* Orange background */
+    color: #fff !important;
+    /* White text */
+}
+
+.toast-update {
+    background-color: #ffc107 !important;
+    /* Yellow background */
+    color: #000 !important;
+    /* Black text */
+}
+
+.toast-custom {
+    background-color: #9c27b0 !important;
+    /* Purple background */
+    color: #fff !important;
+    /* White text */
+}
+
+.mobile-toast {
+    @media (max-width: 768px) {
+        width: 90% !important; /* Ensure the toast width fits better on mobile */
+        margin: 0 auto; /* Center the toast */
+        right: 5%; /* Adjust the right position for better visibility */
+        /* bottom: -30%; */
+    }
+}
+
+/* React Toast custom css end here */
+@media (max-width: 768px) {
+    .Toastify__toast-container {
+        margin-top: 20px;
+        margin-right: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .Toastify {
+        margin-right: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .Toastify__toast {
+        white-space: normal !important;
+        word-break: break-word;
+        display: inline-block;
+        min-width: 200px;
+        max-width: 100%;
+        padding: 12px 16px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px 36px 10px 16px;
+    }
+
+    .Toastify__toast-body {
+        color: #fff !important;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}

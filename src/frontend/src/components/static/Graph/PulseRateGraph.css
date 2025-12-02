@@ -1,0 +1,98 @@
+.pulse-rate-graph {
+    position: relative;
+    width: 100%;
+    padding: 48px 0; /* space above & below for labels/indicator */
+    font-family: "Georama";
+    margin-top: 20px;
+}
+
+/* ===== BAR ===== */
+.bar {
+    display: flex;
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.segment.low {
+    background: #069ab8;
+} /* yellow */
+.segment.normal {
+    background: #06b815;
+} /* green */
+
+.segment.overweight{
+    background:#e7c905;
+} /* yellow */
+.segment.slightly-high {
+    background:#e7c905;
+} /* yellow */
+.segment.high {
+    background: #ff6347;
+} /* yellow */
+/* ===== THRESHOLD LABELS ===== */
+.range-label {
+    position: absolute;
+    top: 32px;
+    transform: translateX(-50%);
+    font-weight: 600;
+    color: #06b815;
+    user-select: none;
+    white-space: nowrap;
+}
+
+/* ===== CURRENT VALUE INDICATOR ===== */
+.value-indicator {
+    position: absolute;
+    top: -1px; /* sit above the bar */
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: left 0.5s ease; /* smooth slide when value changes */
+}
+
+.value-box {
+    min-width: 36px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+
+.value-pointer {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 12px solid; /* color injected inline */
+}
+
+/* ===== CURRENT VALUE INDICATOR FOR BLOOD PRESSURE ===== */
+.value-indicator-for-blood-pressure {
+    position: absolute;
+    bottom: -1px; /* sit above the bar */
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: left 0.3s ease; /* smooth slide when value changes */
+}
+
+.value-box-for-blood-pressure {
+    min-width: 36px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+
+.value-pointer-for-blood-pressure {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 12px solid; /* colour injected inline */
+}

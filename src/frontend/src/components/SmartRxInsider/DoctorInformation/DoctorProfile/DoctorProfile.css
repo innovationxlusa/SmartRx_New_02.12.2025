@@ -1,0 +1,281 @@
+.doctor-profile {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 420px;
+    margin: auto;
+    font-family: "Georama";
+    color: #333;
+}
+
+.profile-header {
+    display: flex;
+    gap: 8px;
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.doctor-name {
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(13px, 1.198vw, 23px);
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    color: #514B4C;
+    margin-bottom: 5px;
+}
+
+.doctor-degree {
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(12px, 0.729vw, 14px);
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    color: #808796;
+    margin-bottom: 5px;
+}
+
+.doctor-specialization {
+    font-size: clamp(12px, 0.729vw, 14px);
+    line-height: 1.25rem;
+    margin-bottom: 0;
+    color: #808796;
+    font-family: 'Georama';
+    letter-spacing: 5%;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.doctor-meta {
+    font-size: clamp(12px, 0.729vw, 14px);
+    margin-bottom: 5px;
+    color: var(--theme-font-color);
+    font-family: 'Georama';
+    line-height: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 3%;
+    -webkit-text-stroke: 0.15px var(--theme-font-color);
+}
+
+.serves-for,
+.field-of-concentration,
+.specializations,
+.experience {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 15px;
+}
+
+.serves-for h6,
+.about h6,
+.locations h6,
+.field-of-concentration h6,
+.specializations h6,
+.experience h6,
+.education h6 {
+    font-weight: 700;
+    font-family: "Georama";
+    font-size: clamp(13px, 0.833vw, 16px);
+    line-height: 19px;
+    color: var(--theme-font-color);
+    margin-bottom: 10px;
+
+}
+
+.serves-for h6 {
+    color: #65636E;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: #f6f8fa;
+    color: #65636E;
+    font-family: 'Georama';
+    font-weight: 400;
+    font-size: clamp(12px, 0.833vw, 16px);
+    line-height: 16px;
+    padding: 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.view-more {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 8px;
+    font-size: clamp(13px, 0.781vw, 15px);
+    color: var(--theme-font-color);
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Georama';
+}
+
+.about p {
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(12px, 0.729vw, 14px);
+    line-height: 1.2rem;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    color: #939DAC;
+}
+
+.chamber-hospital,
+.availability {
+    font-family: "Georama";
+    font-weight: 700;
+    font-size: clamp(12px, 0.729vw, 14px);
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #5F626A;
+    margin-bottom: 2px;
+}
+
+.address-icon {
+    height: clamp(18px, 1.354vw, 26px);
+    width: clamp(15px, 1.042vw, 20px);
+}
+
+.chamber-address,
+.availability-time {
+    font-family: "Georama";
+    font-weight: 400;
+    font-size: clamp(12px, 0.729vw, 14px);
+    line-height: 1.2rem;
+    display: flex;
+    align-items: center;
+    color: #868C9A;
+    margin-bottom: 6px;
+}
+
+.clock-icon {
+    height: clamp(20px, 1.354vw, 26px);
+    width: clamp(15px, 1.354vw, 26px);
+}
+
+.availability span {
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    font-size: clamp(14px, 0.833vw, 16px);
+    display: flex;
+    align-items: center;
+    color: #89909D;
+}
+
+.field-of-concentration h6,
+.specializations h6,
+.experience h6,
+.education h6 {
+    margin-top: 40px;
+}
+
+.field-of-concentration ul,
+.specializations ul,
+.experience ul,
+.education ul {
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 400;
+    padding-left: 25px;
+    font-size: clamp(12px, 0.729vw, 14px);
+    line-height: 1.2rem;
+    color: #868C9A;
+    margin-bottom: 6px;
+}
+
+.field-of-concentration ul,
+.specializations ul {
+    display: flex;
+    flex-direction: column;
+    column-count: 3;
+}
+
+.responsive-border {
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+
+    .serves-for h6,
+    .about h6,
+    .locations h6,
+    .field-of-concentration h6,
+    .specializations h6,
+    .experience h6,
+    .education h6 {
+        font-family: "Georama";
+        font-weight: 700;
+        font-size: clamp(13px, 0.833vw, 16px);
+        line-height: 19px;
+        color: #65636E;
+        margin-bottom: 10px;
+
+    }
+
+    .field-of-concentration,
+    .specializations,
+    .experience {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .serves-for,
+    .locations h6,
+    .field-of-concentration h6,
+    .specializations h6,
+    .experience h6,
+    .education h6 {
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: 15px;
+    }
+
+    .responsive-border {
+        border: none;
+    }
+
+    .divider:not(:last-child) {
+        border-bottom: 1px solid #e5e7eb;
+        margin: 0 50px;
+    }
+}
+
+.img-fluid{
+    font-family: "Georama";
+}
